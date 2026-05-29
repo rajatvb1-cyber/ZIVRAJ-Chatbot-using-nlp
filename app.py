@@ -7,7 +7,7 @@ from io import BytesIO
 from database import init_db
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key_here"
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "your_secret_key_here")
 
 # Initialize database
 init_db()
@@ -602,4 +602,5 @@ def logout():
 # Run App
 # ---------------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
