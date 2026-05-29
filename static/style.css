@@ -330,18 +330,319 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 .lb-name{flex:1;font-size:13px;font-weight:500}
 .lb-score{font-size:13px;font-weight:700;color:var(--primary2)}
 
-/* RESPONSIVE */
-@media(max-width:1100px){.module-panel{width:320px;min-width:320px}}
+/* ======================================== */
+/* RESPONSIVE — Mobile-first approach       */
+/* Desktop layout is UNTOUCHED above this   */
+/* ======================================== */
+
+/* Sidebar overlay backdrop */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);z-index:99;opacity:0;transition:opacity .3s ease}
+.sidebar-overlay.active{display:block;opacity:1}
+
+/* ---- 1100px: Narrow desktop ---- */
+@media(max-width:1100px){
+    .module-panel{width:320px;min-width:320px}
+}
+
+/* ---- 900px: Tablet / small laptop ---- */
 @media(max-width:900px){
-.sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);z-index:100}
-.sidebar.open{transform:translateX(0)}
-.mobile-menu-btn{display:block}
-.module-panel{display:none}
-.workspace{flex-direction:column}
+    /* Sidebar becomes fixed drawer */
+    .sidebar{position:fixed;left:0;top:0;bottom:0;width:300px;min-width:300px;transform:translateX(-100%);z-index:100;transition:transform .3s cubic-bezier(.4,0,.2,1);box-shadow:none}
+    .sidebar.open{transform:translateX(0);box-shadow:8px 0 30px rgba(0,0,0,.4)}
+    .mobile-menu-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius);transition:background .2s}
+    .mobile-menu-btn:hover{background:var(--glass2)}
+
+    /* Module panel hidden on mobile */
+    .module-panel{display:none}
+
+    /* Workspace adapts */
+    .workspace{flex-direction:column}
+
+    /* Top nav adjustments */
+    .top-nav{padding:0 16px;height:52px;gap:10px}
+    .streak-badge{padding:4px 10px;font-size:12px}
+    .nav-username{display:none}
+
+    /* Chat messages — more space */
+    .chat-messages{padding:16px 12px}
+    .general-chat-messages{padding:16px 12px}
+    .msg-bubble{max-width:85%}
 }
+
+/* ---- 768px: Tablet portrait ---- */
+@media(max-width:768px){
+    /* Use dvh for viewport height to handle mobile browser chrome */
+    body{height:100dvh;height:100vh}
+    .app-layout{height:100dvh;height:100vh}
+
+    /* Auth pages */
+    .auth-card{padding:36px 28px;width:100%;max-width:400px}
+    .auth-card h1{font-size:24px}
+    .auth-card form input{padding:12px 16px;font-size:14px}
+    .auth-card form button{padding:12px;font-size:15px}
+
+    /* Sidebar narrower */
+    .sidebar{width:280px;min-width:280px}
+
+    /* General chat landing */
+    .landing-title{font-size:26px}
+    .landing-subtitle{font-size:14px;max-width:90%}
+    .ai-avatar-large{width:80px;height:80px}
+    .landing-logo-img{width:72px;height:72px}
+    .avatar-ring{inset:-6px}
+    .ring-2{inset:-12px}
+
+    /* Suggestion chips — scroll horizontally on tablet */
+    .suggestion-chips{gap:8px;max-width:100%;padding:0 8px}
+    .chip{padding:8px 14px;font-size:12px;white-space:nowrap;flex-shrink:0}
+
+    /* General chat input */
+    .general-chat-input-bar{padding:12px 12px 16px}
+    .general-input-wrapper{gap:8px}
+    .general-input-wrapper input{padding:12px 16px;font-size:14px}
+
+    /* Domain chat input */
+    .chat-input-bar{padding:12px;gap:8px}
+    .chat-input-bar input{padding:10px 14px;font-size:14px}
+
+    /* Chat header */
+    .chat-header-bar{padding:10px 12px;gap:8px;flex-wrap:wrap}
+    .badge-name{font-size:12px}
+
+    /* Module cards in chat */
+    .chat-module-cards{max-width:100%}
+    .chat-question-card{max-width:100%;padding:14px 16px}
+    .chat-result-card{max-width:100%}
+    .chat-complete-card{max-width:100%;padding:20px 16px}
+
+    /* MCQ stats grid */
+    .mcq-stats{grid-template-columns:repeat(2,1fr)}
+
+    /* Complete stats wrap */
+    .complete-stats{flex-wrap:wrap;gap:16px}
+    .chat-complete-stats{flex-wrap:wrap;gap:16px}
+
+    /* Reduce background orbs for performance */
+    .orb:nth-child(3),.orb:nth-child(4){display:none}
+    .orb:nth-child(1){width:300px;height:300px}
+    .orb:nth-child(2){width:250px;height:250px}
+}
+
+/* ---- 600px: Large phone ---- */
 @media(max-width:600px){
-.welcome-title{font-size:24px}
-.domain-cards{grid-template-columns:1fr}
-.mcq-stats{grid-template-columns:repeat(2,1fr)}
-.complete-stats{flex-wrap:wrap}
+    /* Top nav compact */
+    .top-nav{height:48px;padding:0 12px;gap:8px}
+    .nav-breadcrumb{font-size:13px}
+    .nav-home{display:none}
+    .nav-sep{display:none}
+    .nav-current{font-size:13px}
+    .streak-badge{padding:3px 8px;font-size:11px;gap:4px}
+    .streak-icon{font-size:14px}
+    .nav-avatar{width:28px;height:28px;font-size:11px}
+    .nav-logout-btn{width:28px;height:28px}
+
+    /* Sidebar */
+    .sidebar{width:260px;min-width:260px}
+    .sidebar-brand{padding:16px}
+    .brand-logo{width:44px;height:44px}
+    .brand-name{font-size:20px}
+    .brand-tag{font-size:10px}
+    .domain-nav{padding:12px 8px}
+    .domain-btn{padding:10px 12px;gap:10px}
+    .domain-icon{width:36px;height:36px;font-size:20px;border-radius:8px}
+    .domain-name{font-size:13px}
+    .domain-desc{font-size:10px}
+
+    /* Landing */
+    .chat-landing{padding:24px 16px}
+    .landing-title{font-size:22px}
+    .landing-subtitle{font-size:13px;margin-bottom:20px}
+    .ai-avatar-large{width:70px;height:70px;margin-bottom:16px}
+    .landing-logo-img{width:64px;height:64px}
+
+    /* Suggestion chips — horizontal scroll */
+    .suggestion-chips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:8px;padding:0 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+    .suggestion-chips::-webkit-scrollbar{display:none}
+    .chip{padding:8px 14px;font-size:12px;min-width:max-content}
+
+    /* Chat messages */
+    .chat-messages{padding:12px 8px;gap:12px}
+    .general-chat-messages{padding:12px 8px;gap:12px}
+    .msg-avatar{width:30px;height:30px;font-size:12px}
+    .msg-bubble{max-width:88%;padding:10px 12px;font-size:13px;line-height:1.6}
+    .bot-bubble{border-radius:3px var(--radius) var(--radius) var(--radius)}
+    .user-message .msg-bubble{border-radius:var(--radius) 3px var(--radius) var(--radius)}
+
+    /* Chat input — sticky bottom */
+    .general-chat-input-bar{padding:8px 8px 12px;padding-bottom:calc(12px + env(safe-area-inset-bottom, 0px))}
+    .general-input-wrapper{gap:6px}
+    .general-input-wrapper input{padding:11px 14px;font-size:14px;border-radius:22px}
+    .input-hint{font-size:10px}
+
+    .chat-input-bar{padding:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom, 0px));gap:6px}
+    .chat-input-bar input{padding:10px 14px;font-size:14px;border-radius:22px}
+
+    /* Send & action buttons — touch-friendly 44px minimum */
+    .send-btn{width:42px;height:42px}
+    .input-action-btn{width:42px;height:42px}
+    .icon-btn{width:34px;height:34px;font-size:14px}
+
+    /* Chat header compact */
+    .chat-header-bar{padding:8px 10px;gap:6px}
+    .chat-domain-badge{padding:4px 10px}
+    .badge-icon{font-size:16px}
+    .badge-name{font-size:11px}
+    .chat-quiz-progress{padding:4px 10px}
+    .quiz-progress-text{font-size:11px}
+    .quiz-score-text{font-size:11px}
+
+    /* Module cards */
+    .chat-module-btn{padding:10px 12px;gap:10px;font-size:12px}
+    .chat-module-btn .mod-name{font-size:13px}
+    .chat-module-btn .mod-desc{font-size:10px}
+    .chat-module-btn .mod-icon{font-size:18px}
+
+    /* Question cards */
+    .chat-question-card{padding:12px 14px}
+    .chat-q-badge{font-size:9px;padding:2px 8px}
+    .chat-q-text{font-size:14px;margin-bottom:12px}
+    .chat-q-option{padding:8px 12px;gap:8px;font-size:12px}
+    .chat-q-option .opt-key{width:24px;height:24px;font-size:10px}
+    .chat-q-hint{font-size:10px;margin-top:8px}
+
+    /* Result cards */
+    .chat-result-card{padding:12px 14px}
+    .chat-result-title{font-size:14px}
+    .chat-result-explanation{font-size:12px}
+
+    /* Complete card */
+    .chat-complete-card{padding:16px 12px}
+    .chat-complete-card h2{font-size:18px}
+    .ccs-value{font-size:18px}
+    .ccs-label{font-size:10px}
+    .chat-complete-msg{font-size:13px;padding:8px}
+    .chat-complete-actions{gap:8px;flex-wrap:wrap}
+    .primary-btn{padding:8px 16px;font-size:12px}
+    .secondary-btn{padding:8px 16px;font-size:12px}
+
+    /* MCQ stats */
+    .mcq-stats{grid-template-columns:repeat(2,1fr);gap:6px}
+    .stat-card{padding:8px}
+    .stat-value{font-size:14px}
+    .stat-label{font-size:9px}
+
+    /* Leaderboard */
+    .lb-item{padding:8px 10px;gap:8px}
+    .lb-rank{font-size:13px}
+    .lb-name{font-size:12px}
+    .lb-score{font-size:12px}
+
+    /* Self-rate section */
+    .self-rate-section{flex-direction:column;gap:10px;align-items:stretch}
+    .rate-buttons{justify-content:center}
+    .rate-btn{padding:8px 16px;font-size:12px}
+
+    /* Answer comparison */
+    .your-answer-box,.correct-answer-box{padding:10px 12px}
+    .answer-box-content{font-size:12px}
+
+    /* Performance: reduce orbs further */
+    .bg-particles .orb{animation:none;opacity:.1}
+
+    /* Domain cards grid fallback */
+    .domain-cards{grid-template-columns:1fr}
 }
+
+/* ---- 420px: Small phone (iPhone SE, Galaxy S, etc.) ---- */
+@media(max-width:420px){
+    /* Auth pages tighter */
+    .auth-card{padding:28px 20px;border-radius:var(--radius-lg)}
+    .auth-card .brand-icon{width:60px;height:60px;margin-bottom:16px}
+    .auth-card h1{font-size:22px}
+    .auth-card>p{font-size:13px;margin-bottom:24px}
+    .auth-card form input{padding:11px 14px;font-size:14px}
+    .auth-card form button{padding:11px;font-size:14px}
+    .auth-link{font-size:13px}
+
+    /* Top nav ultra-compact */
+    .top-nav{height:44px;padding:0 8px}
+    .nav-current{font-size:12px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+    /* Sidebar */
+    .sidebar{width:240px;min-width:240px}
+
+    /* Landing */
+    .chat-landing{padding:20px 12px}
+    .landing-title{font-size:20px;line-height:1.3}
+    .landing-subtitle{font-size:12px;margin-bottom:16px}
+    .ai-avatar-large{width:60px;height:60px;margin-bottom:12px}
+    .landing-logo-img{width:56px;height:56px}
+
+    /* Messages ultra-compact */
+    .msg-avatar{width:26px;height:26px;font-size:10px}
+    .msg-bubble{max-width:90%;padding:8px 10px;font-size:12px;line-height:1.55}
+
+    /* Input */
+    .general-input-wrapper input{padding:10px 12px;font-size:13px}
+    .chat-input-bar input{padding:9px 12px;font-size:13px}
+    .send-btn{width:40px;height:40px}
+    .input-action-btn{width:40px;height:40px}
+
+    /* Question card tighter */
+    .chat-q-text{font-size:13px;line-height:1.5;margin-bottom:10px}
+    .chat-q-option{padding:7px 10px;font-size:11px;gap:6px}
+    .chat-q-option .opt-key{width:22px;height:22px;font-size:9px}
+
+    /* Complete card */
+    .chat-complete-stats{gap:12px}
+    .ccs-value{font-size:16px}
+    .chat-complete-card h2{font-size:16px}
+
+    /* Module buttons */
+    .chat-module-btn{padding:8px 10px;gap:8px}
+    .chat-module-btn .mod-name{font-size:12px}
+    .chat-module-btn .mod-desc{font-size:9px}
+
+    /* Badges */
+    .badge{padding:3px 8px;font-size:10px}
+}
+
+/* ---- Touch interaction improvements ---- */
+@media(hover:none) and (pointer:coarse){
+    /* Larger touch targets */
+    .domain-btn{padding:14px;min-height:56px}
+    .option-btn{padding:14px 16px;min-height:48px}
+    .chip{padding:10px 16px;min-height:44px}
+    .chat-q-option{padding:10px 14px;min-height:44px}
+    .chat-module-btn{padding:12px 14px;min-height:52px}
+
+    /* Remove hover transforms on touch devices (they stick) */
+    .chip:hover{transform:none}
+    .send-btn:hover{transform:none}
+    .option-btn:hover{transform:none}
+    .chat-module-btn:hover{transform:none}
+    .input-action-btn:hover{transform:none}
+
+    /* Active states instead of hover */
+    .chip:active{border-color:var(--primary);background:var(--primary-glow)}
+    .send-btn:active{transform:scale(.95)}
+    .domain-btn:active{background:var(--glass2)}
+    .option-btn:active{background:var(--glass2);border-color:var(--primary)}
+    .chat-module-btn:active{border-color:var(--primary);background:var(--primary-glow)}
+    .input-action-btn:active{background:var(--glass3);border-color:var(--primary)}
+
+    /* Smooth scrolling for chat */
+    .chat-messages,.general-chat-messages{-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+}
+
+/* ---- iOS safe area insets ---- */
+@supports(padding:max(0px)){
+    .general-chat-input-bar{padding-bottom:max(12px,env(safe-area-inset-bottom))}
+    .chat-input-bar{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+    .sidebar-footer{padding-bottom:max(16px,env(safe-area-inset-bottom))}
+}
+
+/* ---- Prevent horizontal overflow globally ---- */
+html,body{overflow-x:hidden;max-width:100vw}
+.app-layout{max-width:100vw;overflow-x:hidden}
+

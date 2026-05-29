@@ -30,8 +30,65 @@ function setupDomainButtons() {
 function setupMobileMenu() {
     const btn = document.getElementById('mobile-menu-btn');
     const sidebar = document.getElementById('sidebar');
-    if (btn) btn.addEventListener('click', () => sidebar.classList.toggle('open'));
+    if (!btn || !sidebar) return;
+
+    // Create overlay backdrop for mobile sidebar
+    const overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    overlay.id = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+
+    function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent background scroll
+    }
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', () => {
+        if (sidebar.classList.contains('open')) closeSidebar();
+        else openSidebar();
+    });
+
+    // Close sidebar when tapping the overlay
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close sidebar when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) closeSidebar();
+    });
+
+    // Auto-close sidebar when selecting a domain on mobile
+    document.querySelectorAll('.domain-btn').forEach(domainBtn => {
+        domainBtn.addEventListener('click', () => {
+            if (window.innerWidth <= 900) closeSidebar();
+        });
+    });
+
+    // Fix mobile viewport height (handles browser chrome on iOS/Android)
+    function setVH() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setVH();
+    window.addEventListener('resize', setVH);
+
+    // Handle visual viewport changes (keyboard open/close)
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', () => {
+            const vv = window.visualViewport;
+            document.documentElement.style.setProperty('--vvh', `${vv.height}px`);
+        });
+    }
+
+    // Expose closeSidebar globally for use in other functions
+    window._closeSidebar = closeSidebar;
 }
+
 
 // ===== STREAMING ENGINE =====
 function streamText(el, text, chatBox, speed = 25) {
@@ -114,7 +171,8 @@ function backToGeneralChat() {
     currentDomain='general'; currentDomainData=null;
     document.querySelectorAll('.domain-btn').forEach(b=>b.classList.remove('active'));
     document.getElementById('domain-btn-general').classList.add('active');
-    document.getElementById('sidebar').classList.remove('open');
+    if (window._closeSidebar) window._closeSidebar();
+    else document.getElementById('sidebar').classList.remove('open');
     document.getElementById('general-chat-screen').style.display='flex';
     document.getElementById('workspace').style.display='none';
     document.getElementById('nav-current').textContent='General Chat';
@@ -125,7 +183,8 @@ async function selectDomain(domainKey) {
     endQuiz();
     document.querySelectorAll('.domain-btn').forEach(b=>b.classList.remove('active'));
     const ab=document.getElementById('domain-btn-'+domainKey); if(ab) ab.classList.add('active');
-    document.getElementById('sidebar').classList.remove('open');
+    if (window._closeSidebar) window._closeSidebar();
+    else document.getElementById('sidebar').classList.remove('open');
     document.getElementById('general-chat-screen').style.display='none';
     document.getElementById('workspace').style.display='flex';
     try {
