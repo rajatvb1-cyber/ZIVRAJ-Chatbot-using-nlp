@@ -1,0 +1,635 @@
+{
+  "domain": "Machine Learning",
+  "icon": "brain",
+  "description": "Learn Machine Learning from fundamentals to deep learning",
+  "welcome": "Welcome to the Machine Learning Module! I'll guide you through supervised learning, neural networks, and everything in between.",
+  "modules": [
+    {
+      "id": "ml_beginner",
+      "name": "Beginner",
+      "level": 1,
+      "description": "ML fundamentals — types of learning, datasets, and basic algorithms",
+      "unlock_score": 0,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is Machine Learning?",
+          "options": ["A programming language", "A branch of AI where machines learn from data", "A database system", "A web framework"],
+          "answer": 1,
+          "explanation": "Machine Learning is a branch of Artificial Intelligence that enables systems to learn and improve from experience (data) without being explicitly programmed."
+        },
+        {
+          "type": "mcq",
+          "question": "Which type of ML uses labeled data for training?",
+          "options": ["Unsupervised Learning", "Reinforcement Learning", "Supervised Learning", "Semi-supervised Learning"],
+          "answer": 2,
+          "explanation": "Supervised Learning uses labeled data (input-output pairs) to train models. The model learns the mapping between inputs and known correct outputs."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a dataset in Machine Learning?",
+          "options": ["A Python library", "A collection of data used for training and testing", "A type of algorithm", "A visualization tool"],
+          "answer": 1,
+          "explanation": "A dataset is a structured collection of data points used to train ML models and evaluate their performance."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of a training set?",
+          "options": ["To test the model", "To deploy the model", "To teach the model patterns", "To visualize data"],
+          "answer": 2,
+          "explanation": "The training set is used to teach the model by exposing it to data with known outcomes so it can learn patterns and relationships."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is used for predicting continuous values?",
+          "options": ["Classification", "Clustering", "Regression", "Association"],
+          "answer": 2,
+          "explanation": "Regression algorithms predict continuous numerical values (e.g., house prices, temperature). Classification predicts discrete categories."
+        },
+        {
+          "type": "theory",
+          "question": "What is the difference between supervised and unsupervised learning?",
+          "answer": "Supervised learning uses labeled data (known outputs) to train models for prediction/classification. Unsupervised learning works with unlabeled data to find hidden patterns, groups, or structures. Examples: Supervised = spam detection; Unsupervised = customer segmentation."
+        },
+        {
+          "type": "interview",
+          "question": "What is overfitting and how can it be prevented?",
+          "answer": "Overfitting occurs when a model learns training data too well, including noise, and performs poorly on new data. Prevention: 1) Use more training data, 2) Cross-validation, 3) Regularization (L1/L2), 4) Pruning (decision trees), 5) Dropout (neural networks), 6) Early stopping."
+        },
+        {
+          "type": "coding",
+          "question": "Write Python code to split a dataset into training and testing sets using sklearn.",
+          "answer": "from sklearn.model_selection import train_test_split\nimport numpy as np\n\n# Sample data\nX = np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])\ny = np.array([0, 1, 0, 1, 0])\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\nprint('Training set:', X_train.shape)\nprint('Testing set:', X_test.shape)"
+        },
+        {
+          "type": "theory",
+          "question": "Explain the concept of feature engineering.",
+          "answer": "Feature engineering is the process of creating, selecting, and transforming input variables (features) to improve ML model performance. It includes: creating new features from existing ones, encoding categorical variables, normalizing/scaling numerical features, and removing irrelevant features."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to implement a simple Linear Regression model using sklearn.",
+          "answer": "from sklearn.linear_model import LinearRegression\nimport numpy as np\n\nX = np.array([[1],[2],[3],[4],[5]])\ny = np.array([2, 4, 5, 4, 5])\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprediction = model.predict([[6]])\nprint(f'Prediction for 6: {prediction[0]:.2f}')\nprint(f'Coefficient: {model.coef_[0]:.2f}')\nprint(f'Intercept: {model.intercept_:.2f}')"
+        },
+        {
+          "type": "mcq",
+          "question": "What is Machine Learning?",
+          "options": ["A method where machines learn from data", "A web browser", "A database system", "An operating system"],
+          "answer": 0,
+          "explanation": "Machine Learning enables computers to learn patterns from data and make predictions."
+        },
+        {
+          "type": "mcq",
+          "question": "Which programming language is most commonly used in Machine Learning?",
+          "options": ["Python", "HTML", "CSS", "PHP"],
+          "answer": 0,
+          "explanation": "Python is widely used because of its simplicity and powerful ML libraries."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is commonly used for Machine Learning in Python?",
+          "options": ["Scikit-learn", "Bootstrap", "Tkinter", "Flask"],
+          "answer": 0,
+          "explanation": "Scikit-learn provides tools for data analysis and machine learning."
+        },
+        {
+          "type": "mcq",
+          "question": "What is data in Machine Learning?",
+          "options": ["Information used for training models", "A programming language", "A type of hardware", "A network cable"],
+          "answer": 0,
+          "explanation": "Machine Learning models learn patterns from data."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a model in Machine Learning?",
+          "options": ["A trained system that makes predictions", "A database", "A UI design", "A cloud server"],
+          "answer": 0,
+          "explanation": "A model learns from data and predicts outputs for new inputs."
+        },
+        {
+          "type": "mcq",
+          "question": "Which type of learning uses labeled data?",
+          "options": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning"],
+          "answer": 0,
+          "explanation": "Supervised learning trains models using labeled datasets."
+        },
+        {
+          "type": "mcq",
+          "question": "Which type of learning uses unlabeled data?",
+          "options": ["Supervised Learning", "Unsupervised Learning", "Linear Learning", "Sequential Learning"],
+          "answer": 1,
+          "explanation": "Unsupervised learning identifies hidden patterns in unlabeled data."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is commonly used for classification?",
+          "options": ["Logistic Regression", "Bubble Sort", "Binary Search", "Merge Sort"],
+          "answer": 0,
+          "explanation": "Logistic Regression is widely used for classification problems."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is commonly used for regression problems?",
+          "options": ["Linear Regression", "DFS", "BFS", "Quick Sort"],
+          "answer": 0,
+          "explanation": "Linear Regression predicts continuous values."
+        },
+        {
+          "type": "mcq",
+          "question": "What is training data?",
+          "options": ["Data used to train a model", "Data used for gaming", "Data used to delete files", "Data used for networking"],
+          "answer": 0,
+          "explanation": "Training data helps the model learn patterns."
+        },
+        {
+          "type": "mcq",
+          "question": "What is testing data?",
+          "options": ["Data used to evaluate model performance", "Data used to create websites", "Data used for backups", "Data used to format drives"],
+          "answer": 0,
+          "explanation": "Testing data checks how well a model performs on unseen data."
+        },
+        {
+          "type": "mcq",
+          "question": "What does AI stand for?",
+          "options": ["Artificial Intelligence", "Automatic Internet", "Advanced Integration", "Artificial Interface"],
+          "answer": 0,
+          "explanation": "AI refers to systems that simulate human intelligence."
+        },
+        {
+          "type": "mcq",
+          "question": "Which field is closely related to Machine Learning?",
+          "options": ["Artificial Intelligence", "Civil Engineering", "Mechanical Drawing", "Networking Hardware"],
+          "answer": 0,
+          "explanation": "Machine Learning is a subset of Artificial Intelligence."
+        },
+        {
+          "type": "mcq",
+          "question": "What is prediction in Machine Learning?",
+          "options": ["Estimating output using trained models", "Deleting data", "Formatting systems", "Building hardware"],
+          "answer": 0,
+          "explanation": "ML models predict outputs based on learned patterns."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is mainly used for numerical operations in ML?",
+          "options": ["NumPy", "Tkinter", "Flask", "Django"],
+          "answer": 0,
+          "explanation": "NumPy provides efficient numerical computation tools."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is commonly used for data visualization?",
+          "options": ["Matplotlib", "Requests", "TensorFlow", "BeautifulSoup"],
+          "answer": 0,
+          "explanation": "Matplotlib is used for creating charts and graphs."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is used for handling datasets?",
+          "options": ["Pandas", "Flask", "Tkinter", "Pygame"],
+          "answer": 0,
+          "explanation": "Pandas helps organize and analyze tabular data."
+        },
+        {
+          "type": "mcq",
+          "question": "What is accuracy in Machine Learning?",
+          "options": ["Measure of correct predictions", "Internet speed", "Storage capacity", "Programming syntax"],
+          "answer": 0,
+          "explanation": "Accuracy measures how many predictions are correct."
+        },
+        {
+          "type": "mcq",
+          "question": "What is overfitting?",
+          "options": ["Model performs too specifically on training data", "Model runs slowly", "System crash", "Internet failure"],
+          "answer": 0,
+          "explanation": "Overfitting occurs when a model memorizes training data and performs poorly on new data."
+        },
+        {
+          "type": "mcq",
+          "question": "Which framework is commonly used for deep learning?",
+          "options": ["TensorFlow", "Bootstrap", "React", "Laravel"],
+          "answer": 0,
+          "explanation": "TensorFlow is a popular framework for deep learning applications."
+        }
+      ]
+    },
+    {
+      "id": "ml_intermediate",
+      "name": "Intermediate",
+      "level": 2,
+      "description": "Classification, evaluation metrics, ensemble methods, and feature selection",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the purpose of cross-validation?",
+          "options": ["To increase training data", "To evaluate model performance on unseen data", "To reduce features", "To speed up training"],
+          "answer": 1,
+          "explanation": "Cross-validation splits data into k folds, training on k-1 and testing on 1 fold repeatedly. It provides a more reliable estimate of model performance."
+        },
+        {
+          "type": "mcq",
+          "question": "Which metric is best for imbalanced classification?",
+          "options": ["Accuracy", "F1-Score", "Mean Squared Error", "R-squared"],
+          "answer": 1,
+          "explanation": "F1-Score is the harmonic mean of precision and recall, making it ideal for imbalanced datasets where accuracy can be misleading."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Random Forest?",
+          "options": ["A single decision tree", "An ensemble of decision trees", "A clustering algorithm", "A dimensionality reduction technique"],
+          "answer": 1,
+          "explanation": "Random Forest is an ensemble method that builds multiple decision trees and combines their predictions through voting (classification) or averaging (regression)."
+        },
+        {
+          "type": "mcq",
+          "question": "What does the confusion matrix show?",
+          "options": ["Feature importance", "True/False Positives and Negatives", "Training accuracy", "Data distribution"],
+          "answer": 1,
+          "explanation": "A confusion matrix shows TP, TN, FP, and FN counts, helping visualize classification model performance beyond simple accuracy."
+        },
+        {
+          "type": "mcq",
+          "question": "What is regularization in machine learning?",
+          "options": ["Adding more features", "A technique to prevent overfitting by penalizing complexity", "Increasing training time", "Data augmentation"],
+          "answer": 1,
+          "explanation": "Regularization adds a penalty term to the loss function to discourage complex models. L1 (Lasso) promotes sparsity; L2 (Ridge) reduces weight magnitudes."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the bias-variance tradeoff.",
+          "answer": "Bias is the error from simplifying assumptions (underfitting). Variance is the error from sensitivity to training data fluctuations (overfitting). The tradeoff: decreasing bias increases variance and vice versa. The goal is finding the sweet spot that minimizes total error."
+        },
+        {
+          "type": "interview",
+          "question": "How do you handle missing values in a dataset?",
+          "answer": "Options: 1) Remove rows/columns with missing values, 2) Impute with mean/median/mode, 3) Use KNN imputation, 4) Forward/backward fill for time series, 5) Use algorithms that handle missing values (XGBoost), 6) Create a 'missing' indicator feature. Choice depends on data volume and missingness pattern."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to evaluate a classification model with a confusion matrix and classification report.",
+          "answer": "from sklearn.metrics import confusion_matrix, classification_report\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.datasets import load_iris\n\ndata = load_iris()\nX_train, X_test, y_train, y_test = train_test_split(\n    data.data, data.target, test_size=0.3, random_state=42\n)\n\nmodel = RandomForestClassifier(n_estimators=100)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\nprint('Confusion Matrix:')\nprint(confusion_matrix(y_test, y_pred))\nprint('\\nClassification Report:')\nprint(classification_report(y_test, y_pred))"
+        },
+        {
+          "type": "theory",
+          "question": "What is the difference between bagging and boosting?",
+          "answer": "Bagging (Bootstrap Aggregating) trains models independently on random subsets and aggregates results (e.g., Random Forest). Boosting trains models sequentially, each correcting the previous model's errors (e.g., AdaBoost, XGBoost). Bagging reduces variance; boosting reduces bias."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to perform K-Fold Cross Validation.",
+          "answer": "from sklearn.model_selection import cross_val_score\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.datasets import load_iris\n\ndata = load_iris()\nmodel = RandomForestClassifier(n_estimators=100)\n\nscores = cross_val_score(model, data.data, data.target, cv=5, scoring='accuracy')\n\nprint(f'Cross-validation scores: {scores}')\nprint(f'Mean accuracy: {scores.mean():.4f}')\nprint(f'Std deviation: {scores.std():.4f}')"
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is mainly used for classification problems?",
+          "options": ["Logistic Regression", "Linear Regression", "K-Means", "Apriori"],
+          "answer": 0,
+          "explanation": "Logistic Regression is widely used for binary classification tasks."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is mainly used for clustering?",
+          "options": ["Decision Tree", "K-Means", "Linear Regression", "Random Forest"],
+          "answer": 1,
+          "explanation": "K-Means groups similar data points into clusters."
+        },
+        {
+          "type": "mcq",
+          "question": "What is feature engineering?",
+          "options": ["Creating new useful input features", "Building hardware", "Designing websites", "Removing databases"],
+          "answer": 0,
+          "explanation": "Feature engineering improves model performance by creating better input variables."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of train_test_split() in Scikit-learn?",
+          "options": ["To divide data into training and testing sets", "To delete datasets", "To visualize graphs", "To normalize images"],
+          "answer": 0,
+          "explanation": "train_test_split() separates data for model training and evaluation."
+        },
+        {
+          "type": "mcq",
+          "question": "Which metric is commonly used for classification accuracy?",
+          "options": ["Accuracy Score", "Mean Squared Error", "RMSE", "Variance"],
+          "answer": 0,
+          "explanation": "Accuracy Score measures the percentage of correct predictions."
+        },
+        {
+          "type": "mcq",
+          "question": "Which metric is commonly used for regression problems?",
+          "options": ["Mean Squared Error", "Accuracy", "Precision", "Recall"],
+          "answer": 0,
+          "explanation": "MSE calculates the average squared difference between predicted and actual values."
+        },
+        {
+          "type": "mcq",
+          "question": "What is normalization in Machine Learning?",
+          "options": ["Scaling data to a fixed range", "Deleting duplicate records", "Creating neural networks", "Compressing files"],
+          "answer": 0,
+          "explanation": "Normalization ensures all features have similar scales."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library provides preprocessing tools in Python ML?",
+          "options": ["Scikit-learn", "Tkinter", "Flask", "Pygame"],
+          "answer": 0,
+          "explanation": "Scikit-learn includes preprocessing utilities like scaling and encoding."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a Decision Tree?",
+          "options": ["A tree-based predictive algorithm", "A database model", "A sorting algorithm", "A web framework"],
+          "answer": 0,
+          "explanation": "Decision Trees split data into branches to make predictions."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm combines multiple decision trees?",
+          "options": ["Random Forest", "Linear Regression", "KNN", "Naive Bayes"],
+          "answer": 0,
+          "explanation": "Random Forest uses many decision trees for improved prediction accuracy."
+        },
+        {
+          "type": "mcq",
+          "question": "What does KNN stand for?",
+          "options": ["K-Nearest Neighbors", "Known Network Nodes", "Kernel Neural Network", "Knowledge Number Network"],
+          "answer": 0,
+          "explanation": "KNN predicts values based on the nearest data points."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cross-validation?",
+          "options": ["Technique for evaluating model performance", "Method for deleting data", "Data encryption process", "Database optimization"],
+          "answer": 0,
+          "explanation": "Cross-validation checks how well a model generalizes to unseen data."
+        },
+        {
+          "type": "mcq",
+          "question": "What is underfitting?",
+          "options": ["Model fails to learn patterns properly", "Model memorizes data", "Model becomes too large", "Internet failure"],
+          "answer": 0,
+          "explanation": "Underfitting occurs when a model is too simple to capture data patterns."
+        },
+        {
+          "type": "mcq",
+          "question": "Which algorithm is based on probability?",
+          "options": ["Naive Bayes", "K-Means", "Linear Search", "Bubble Sort"],
+          "answer": 0,
+          "explanation": "Naive Bayes uses probability theory for classification."
+        },
+        {
+          "type": "mcq",
+          "question": "What is hyperparameter tuning?",
+          "options": ["Optimizing model settings", "Formatting datasets", "Deleting errors", "Building servers"],
+          "answer": 0,
+          "explanation": "Hyperparameter tuning improves model performance by adjusting settings."
+        },
+        {
+          "type": "mcq",
+          "question": "Which technique helps reduce overfitting?",
+          "options": ["Regularization", "Duplication", "Compression", "Sorting"],
+          "answer": 0,
+          "explanation": "Regularization prevents models from becoming too complex."
+        },
+        {
+          "type": "mcq",
+          "question": "What is confusion matrix used for?",
+          "options": ["Evaluating classification models", "Creating databases", "Managing cloud servers", "Visualizing websites"],
+          "answer": 0,
+          "explanation": "Confusion matrices show correct and incorrect predictions."
+        },
+        {
+          "type": "mcq",
+          "question": "What is precision in Machine Learning?",
+          "options": ["Ratio of correct positive predictions", "Model training speed", "Amount of dataset", "Graph plotting method"],
+          "answer": 0,
+          "explanation": "Precision measures how many predicted positives are actually correct."
+        },
+        {
+          "type": "mcq",
+          "question": "What is recall in Machine Learning?",
+          "options": ["Ability to find all actual positives", "Dataset storage size", "Prediction speed", "Training duration"],
+          "answer": 0,
+          "explanation": "Recall measures how many actual positive cases are correctly identified."
+        },
+        {
+          "type": "mcq",
+          "question": "Which Python library is mainly used for deep learning?",
+          "options": ["TensorFlow", "Pandas", "BeautifulSoup", "OpenCV"],
+          "answer": 0,
+          "explanation": "TensorFlow is a popular framework for building deep learning models."
+        }
+      ]
+    },
+    {
+      "id": "ml_advanced",
+      "name": "Advanced",
+      "level": 3,
+      "description": "Neural networks, deep learning, NLP, and advanced optimization",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is backpropagation in neural networks?",
+          "options": ["A data preprocessing step", "Algorithm to compute gradients for weight updates", "A type of activation function", "A regularization technique"],
+          "answer": 1,
+          "explanation": "Backpropagation calculates the gradient of the loss function with respect to each weight by applying the chain rule, enabling gradient descent to update weights."
+        },
+        {
+          "type": "mcq",
+          "question": "Which activation function solves the vanishing gradient problem?",
+          "options": ["Sigmoid", "Tanh", "ReLU", "Softmax"],
+          "answer": 2,
+          "explanation": "ReLU (Rectified Linear Unit) outputs the input directly if positive, else 0. It doesn't saturate for positive values, avoiding vanishing gradients."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of dropout in neural networks?",
+          "options": ["Speed up training", "Prevent overfitting by randomly disabling neurons", "Increase model accuracy", "Handle missing data"],
+          "answer": 1,
+          "explanation": "Dropout randomly sets a fraction of neurons to zero during training, preventing co-adaptation and forcing the network to learn robust features."
+        },
+        {
+          "type": "mcq",
+          "question": "What is transfer learning?",
+          "options": ["Moving data between databases", "Using a pre-trained model for a new task", "Training from scratch", "Data augmentation technique"],
+          "answer": 1,
+          "explanation": "Transfer learning uses knowledge from a model trained on a large dataset (e.g., ImageNet) and fine-tunes it for a new, typically smaller dataset task."
+        },
+        {
+          "type": "mcq",
+          "question": "Which architecture is best suited for sequence data?",
+          "options": ["CNN", "RNN/LSTM", "Autoencoder", "GAN"],
+          "answer": 1,
+          "explanation": "RNN/LSTM networks are designed for sequential data (text, time series) as they maintain hidden states that capture temporal dependencies."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the Transformer architecture and its significance.",
+          "answer": "Transformers use self-attention mechanisms to process all input positions simultaneously (unlike sequential RNNs). Key components: Multi-Head Attention, Position Encoding, Feed-Forward layers. Significance: enabled parallel processing, better long-range dependencies, and became the foundation for BERT, GPT, and modern NLP."
+        },
+        {
+          "type": "interview",
+          "question": "How would you approach a new ML project from scratch?",
+          "answer": "1) Understand the business problem, 2) Collect and explore data (EDA), 3) Clean and preprocess data, 4) Feature engineering, 5) Select and train models, 6) Evaluate using appropriate metrics, 7) Tune hyperparameters, 8) Validate with cross-validation, 9) Deploy and monitor, 10) Iterate based on feedback."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to build a simple neural network with Keras/TensorFlow.",
+          "answer": "from tensorflow import keras\nfrom tensorflow.keras import layers\n\nmodel = keras.Sequential([\n    layers.Dense(128, activation='relu', input_shape=(784,)),\n    layers.Dropout(0.3),\n    layers.Dense(64, activation='relu'),\n    layers.Dropout(0.2),\n    layers.Dense(10, activation='softmax')\n])\n\nmodel.compile(\n    optimizer='adam',\n    loss='sparse_categorical_crossentropy',\n    metrics=['accuracy']\n)\n\nmodel.summary()"
+        },
+        {
+          "type": "theory",
+          "question": "What are GANs (Generative Adversarial Networks) and how do they work?",
+          "answer": "GANs consist of two neural networks competing: a Generator creates fake data, and a Discriminator tries to distinguish real from fake. Through adversarial training, the Generator improves at creating realistic data. Applications: image generation, style transfer, data augmentation, deepfakes."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to implement a simple text classification pipeline using TF-IDF and Naive Bayes.",
+          "answer": "from sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.naive_bayes import MultinomialNB\nfrom sklearn.pipeline import Pipeline\n\ntexts = ['I love this movie', 'Terrible film', 'Great acting', 'Worst ever', 'Amazing plot']\nlabels = [1, 0, 1, 0, 1]\n\npipeline = Pipeline([\n    ('tfidf', TfidfVectorizer()),\n    ('clf', MultinomialNB())\n])\n\npipeline.fit(texts, labels)\nprediction = pipeline.predict(['This movie was wonderful'])\nprint(f'Prediction: {\"Positive\" if prediction[0]==1 else \"Negative\"}')"
+        },
+        {
+          "type": "mcq",
+          "question": "What is Deep Learning?",
+          "options": ["A subset of Machine Learning using neural networks", "A database management system", "A cloud storage method", "A web development framework"],
+          "answer": 0,
+          "explanation": "Deep Learning uses multiple neural network layers to learn complex patterns."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is most commonly used for Deep Learning in Python?",
+          "options": ["TensorFlow", "Tkinter", "BeautifulSoup", "Requests"],
+          "answer": 0,
+          "explanation": "TensorFlow is one of the most widely used deep learning frameworks."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a neural network?",
+          "options": ["A system inspired by the human brain", "A database structure", "A sorting algorithm", "A hardware device"],
+          "answer": 0,
+          "explanation": "Neural networks simulate interconnected brain neurons for learning patterns."
+        },
+        {
+          "type": "mcq",
+          "question": "Which activation function is commonly used in deep learning?",
+          "options": ["ReLU", "Bubble Sort", "DFS", "Quick Search"],
+          "answer": 0,
+          "explanation": "ReLU (Rectified Linear Unit) is widely used because it improves training speed."
+        },
+        {
+          "type": "mcq",
+          "question": "What does CNN stand for?",
+          "options": ["Convolutional Neural Network", "Central Neural Node", "Computer Numeric Network", "Continuous Neural Navigation"],
+          "answer": 0,
+          "explanation": "CNNs are specialized neural networks mainly used for image processing."
+        },
+        {
+          "type": "mcq",
+          "question": "Which type of neural network is mainly used for image recognition?",
+          "options": ["CNN", "RNN", "Linear Regression", "KNN"],
+          "answer": 0,
+          "explanation": "CNNs are highly effective for image classification and computer vision tasks."
+        },
+        {
+          "type": "mcq",
+          "question": "What does RNN stand for?",
+          "options": ["Recurrent Neural Network", "Random Numeric Network", "Recursive Node Network", "Rapid Neural Navigation"],
+          "answer": 0,
+          "explanation": "RNNs are designed for sequential data such as text and time series."
+        },
+        {
+          "type": "mcq",
+          "question": "Which neural network is commonly used for text processing?",
+          "options": ["RNN", "CNN", "Decision Tree", "Linear Regression"],
+          "answer": 0,
+          "explanation": "RNNs process sequential information and are widely used in NLP."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Natural Language Processing (NLP)?",
+          "options": ["Interaction between computers and human language", "Database optimization", "Cloud networking", "Image compression"],
+          "answer": 0,
+          "explanation": "NLP enables machines to understand and process human language."
+        },
+        {
+          "type": "mcq",
+          "question": "Which Python library is commonly used for NLP?",
+          "options": ["NLTK", "Tkinter", "NumPy", "Matplotlib"],
+          "answer": 0,
+          "explanation": "NLTK provides tools for text processing and NLP tasks."
+        },
+        {
+          "type": "mcq",
+          "question": "What is transfer learning?",
+          "options": ["Using a pre-trained model for a new task", "Moving files between systems", "Transferring databases", "Changing programming languages"],
+          "answer": 0,
+          "explanation": "Transfer learning reuses learned knowledge from existing models."
+        },
+        {
+          "type": "mcq",
+          "question": "What is reinforcement learning?",
+          "options": ["Learning through rewards and penalties", "Learning with only labeled data", "Learning with clustering", "Learning by deleting errors"],
+          "answer": 0,
+          "explanation": "Reinforcement learning trains agents using reward-based feedback."
+        },
+        {
+          "type": "mcq",
+          "question": "What is dimensionality reduction?",
+          "options": ["Reducing the number of input features", "Reducing internet speed", "Deleting databases", "Compressing images"],
+          "answer": 0,
+          "explanation": "Dimensionality reduction simplifies datasets while retaining important information."
+        },
+        {
+          "type": "mcq",
+          "question": "Which technique is commonly used for dimensionality reduction?",
+          "options": ["PCA", "KNN", "Naive Bayes", "Linear Search"],
+          "answer": 0,
+          "explanation": "Principal Component Analysis (PCA) reduces dataset dimensions."
+        },
+        {
+          "type": "mcq",
+          "question": "What is bias in Machine Learning?",
+          "options": ["Error due to overly simple assumptions", "Network delay", "Database duplication", "Programming syntax error"],
+          "answer": 0,
+          "explanation": "High bias can cause underfitting in ML models."
+        },
+        {
+          "type": "mcq",
+          "question": "What is variance in Machine Learning?",
+          "options": ["Model sensitivity to training data", "Internet bandwidth", "Storage size", "Programming speed"],
+          "answer": 0,
+          "explanation": "High variance often leads to overfitting."
+        },
+        {
+          "type": "mcq",
+          "question": "What is gradient descent?",
+          "options": ["An optimization algorithm", "A graph plotting tool", "A database query", "A file compression method"],
+          "answer": 0,
+          "explanation": "Gradient descent minimizes model error by updating parameters iteratively."
+        },
+        {
+          "type": "mcq",
+          "question": "What is epoch in deep learning?",
+          "options": ["One complete pass through the training dataset", "A neural network layer", "A cloud service", "A Python framework"],
+          "answer": 0,
+          "explanation": "An epoch means the model has processed the entire training dataset once."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is commonly used for computer vision?",
+          "options": ["OpenCV", "Pandas", "Requests", "Flask"],
+          "answer": 0,
+          "explanation": "OpenCV provides tools for image and video processing."
+        },
+        {
+          "type": "mcq",
+          "question": "What is model deployment?",
+          "options": ["Making a trained model available for real-world use", "Deleting a model", "Training a dataset", "Creating visualizations"],
+          "answer": 0,
+          "explanation": "Deployment allows users or applications to access ML model predictions."
+        }
+      ]
+    }
+  ]
+}

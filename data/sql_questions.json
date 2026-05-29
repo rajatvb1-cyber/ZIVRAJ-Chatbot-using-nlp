@@ -1,0 +1,245 @@
+{
+  "domain": "SQL",
+  "icon": "database",
+  "description": "Master SQL from basic queries to advanced database design",
+  "welcome": "Welcome to the SQL Learning Module! Let's dive into databases, queries, joins, and everything you need to become a SQL expert.",
+  "modules": [
+    {
+      "id": "sql_beginner",
+      "name": "Beginner",
+      "level": 1,
+      "description": "SQL basics",
+      "unlock_score": 0,
+      "questions": [
+        {"type":"mcq","question":"What does SQL stand for?","options":["Structured Query Language","Simple Query Language","Standard Question Language","Sequential Query Logic"],"answer":0,"explanation":"SQL stands for Structured Query Language."},
+        {"type":"mcq","question":"Which SQL statement retrieves data?","options":["GET","FETCH","SELECT","RETRIEVE"],"answer":2,"explanation":"SELECT is used to query data from tables."},
+        {"type":"mcq","question":"Which clause filters records?","options":["ORDER BY","GROUP BY","WHERE","HAVING"],"answer":2,"explanation":"WHERE filters rows based on conditions."},
+        {"type":"mcq","question":"What is a Primary Key?","options":["A foreign reference","A column uniquely identifying each row","An index","A procedure"],"answer":1,"explanation":"A Primary Key uniquely identifies each row and cannot be NULL."},
+        {"type":"mcq","question":"Which command adds a new row?","options":["ADD","INSERT INTO","APPEND","CREATE ROW"],"answer":1,"explanation":"INSERT INTO adds new records to a table."},
+        {"type":"theory","question":"Difference between DELETE, TRUNCATE, and DROP?","answer":"DELETE removes specific rows (can rollback). TRUNCATE removes all rows but keeps structure. DROP removes the entire table."},
+        {"type":"interview","question":"What are the types of SQL commands?","answer":"DDL: CREATE, ALTER, DROP. DML: SELECT, INSERT, UPDATE, DELETE. DCL: GRANT, REVOKE. TCL: COMMIT, ROLLBACK."},
+        {"type":"coding","question":"Write SQL to create a students table.","answer":"CREATE TABLE students (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    age INT,\n    grade CHAR(2)\n);"},
+        {"type":"theory","question":"Difference between CHAR and VARCHAR?","answer":"CHAR is fixed-length, VARCHAR is variable-length. Use CHAR for codes, VARCHAR for names."},
+        {"type":"coding","question":"Select students with grade A ordered by name.","answer":"SELECT * FROM students\nWHERE grade = 'A'\nORDER BY name ASC;"},
+        {
+          "type": "mcq",
+          "question": "What does SQL stand for?",
+          "options": ["Structured Query Language", "Simple Query Language", "Sequential Query Language", "System Query Language"],
+          "answer": 0,
+          "explanation": "SQL is used to communicate with and manage databases."
+        },
+        {
+          "type": "mcq",
+          "question": "Which SQL command is used to retrieve data from a table?",
+          "options": ["GET", "SELECT", "FETCH", "SHOW"],
+          "answer": 1,
+          "explanation": "The SELECT command retrieves data from database tables."
+        },
+        {
+          "type": "mcq",
+          "question": "Which SQL command is used to insert new data?",
+          "options": ["ADD", "INSERT", "UPDATE", "CREATE"],
+          "answer": 1,
+          "explanation": "INSERT INTO is used to add new records into a table."
+        },
+        {
+          "type": "mcq",
+          "question": "Which command is used to delete data from a table?",
+          "options": ["REMOVE", "DROP", "DELETE", "CLEAR"],
+          "answer": 2,
+          "explanation": "DELETE removes records from a table."
+        },
+        {
+          "type": "mcq",
+          "question": "Which command is used to modify existing data?",
+          "options": ["MODIFY", "UPDATE", "CHANGE", "ALTER"],
+          "answer": 1,
+          "explanation": "UPDATE changes existing records in a database table."
+        },
+        {
+          "type": "mcq",
+          "question": "Which command creates a new table?",
+          "options": ["NEW TABLE", "MAKE TABLE", "CREATE TABLE", "ADD TABLE"],
+          "answer": 2,
+          "explanation": "CREATE TABLE is used to create a new database table."
+        },
+        {
+          "type": "mcq",
+          "question": "Which command removes an entire table?",
+          "options": ["DELETE TABLE", "REMOVE TABLE", "DROP TABLE", "CLEAR TABLE"],
+          "answer": 2,
+          "explanation": "DROP TABLE permanently deletes a table from the database."
+        },
+        {
+          "type": "mcq",
+          "question": "Which clause is used to filter records?",
+          "options": ["ORDER BY", "GROUP BY", "WHERE", "HAVING"],
+          "answer": 2,
+          "explanation": "WHERE filters rows based on specified conditions."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword sorts query results?",
+          "options": ["SORT", "ORDER BY", "GROUP BY", "FILTER"],
+          "answer": 1,
+          "explanation": "ORDER BY arranges records in ascending or descending order."
+        },
+        {
+          "type": "mcq",
+          "question": "Which symbol is used for all columns in SELECT?",
+          "options": ["#", "*", "%", "@"],
+          "answer": 1,
+          "explanation": "SELECT * retrieves all columns from a table."
+        },
+        {
+          "type": "mcq",
+          "question": "Which SQL statement is used to create a database?",
+          "options": ["MAKE DATABASE", "CREATE DATABASE", "NEW DATABASE", "ADD DATABASE"],
+          "answer": 1,
+          "explanation": "CREATE DATABASE creates a new database."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword removes duplicate records?",
+          "options": ["UNIQUE", "DISTINCT", "REMOVE", "FILTER"],
+          "answer": 1,
+          "explanation": "DISTINCT returns only unique values."
+        },
+        {
+          "type": "mcq",
+          "question": "Which clause limits the number of returned rows?",
+          "options": ["TOP", "LIMIT", "STOP", "ROWS"],
+          "answer": 1,
+          "explanation": "LIMIT restricts the number of records returned."
+        },
+        {
+          "type": "mcq",
+          "question": "Which operator checks for equality?",
+          "options": ["==", "=", "!=", "=>"],
+          "answer": 1,
+          "explanation": "The = operator checks whether values are equal."
+        },
+        {
+          "type": "mcq",
+          "question": "Which SQL clause groups rows with similar values?",
+          "options": ["ORDER BY", "GROUP BY", "WHERE", "LIMIT"],
+          "answer": 1,
+          "explanation": "GROUP BY organizes rows sharing common values."
+        },
+        {
+          "type": "mcq",
+          "question": "Which aggregate function counts rows?",
+          "options": ["SUM()", "COUNT()", "AVG()", "MAX()"],
+          "answer": 1,
+          "explanation": "COUNT() returns the number of rows."
+        },
+        {
+          "type": "mcq",
+          "question": "Which aggregate function returns the highest value?",
+          "options": ["MAX()", "TOP()", "HIGH()", "UPPER()"],
+          "answer": 0,
+          "explanation": "MAX() returns the maximum value from a column."
+        },
+        {
+          "type": "mcq",
+          "question": "Which aggregate function returns the lowest value?",
+          "options": ["MIN()", "LOW()", "BOTTOM()", "LESS()"],
+          "answer": 0,
+          "explanation": "MIN() returns the smallest value from a column."
+        },
+        {
+          "type": "mcq",
+          "question": "Which function calculates average values?",
+          "options": ["SUM()", "AVG()", "MEAN()", "COUNT()"],
+          "answer": 1,
+          "explanation": "AVG() calculates the average value of numeric columns."
+        },
+        {
+          "type": "mcq",
+          "question": "Which SQL keyword is used to combine conditions?",
+          "options": ["JOIN", "AND", "GROUP", "MERGE"],
+          "answer": 1,
+          "explanation": "AND combines multiple conditions in SQL queries."
+        }
+      ]
+    },
+    {
+      "id": "sql_intermediate",
+      "name": "Intermediate",
+      "level": 2,
+      "description": "JOINs, subqueries, aggregates",
+      "unlock_score": 60,
+      "questions": [
+        {"type":"mcq","question":"Which JOIN returns all rows from both tables?","options":["INNER JOIN","LEFT JOIN","RIGHT JOIN","FULL OUTER JOIN"],"answer":3,"explanation":"FULL OUTER JOIN returns all rows from both tables with NULLs for non-matches."},
+        {"type":"mcq","question":"What is a subquery?","options":["A backup query","A query inside another query","A stored procedure","A temp table"],"answer":1,"explanation":"A subquery is nested inside another SQL statement."},
+        {"type":"mcq","question":"Which function counts rows?","options":["SUM()","AVG()","COUNT()","MAX()"],"answer":2,"explanation":"COUNT() returns the number of matching rows."},
+        {"type":"mcq","question":"WHERE vs HAVING?","options":["No difference","WHERE before grouping, HAVING after","HAVING is faster","WHERE for JOINs only"],"answer":1,"explanation":"WHERE filters rows before GROUP BY, HAVING filters groups after."},
+        {"type":"mcq","question":"What is an index?","options":["A primary key","A structure to speed up queries","A constraint","A backup"],"answer":1,"explanation":"An index speeds up data retrieval at the cost of storage."},
+        {"type":"theory","question":"Explain JOIN types.","answer":"INNER: matching rows only. LEFT: all left + matching right. RIGHT: all right + matching left. FULL: all rows from both. CROSS: Cartesian product."},
+        {"type":"interview","question":"What is normalization?","answer":"Organizing data to reduce redundancy. 1NF: atomic values. 2NF: no partial dependencies. 3NF: no transitive dependencies."},
+        {"type":"coding","question":"Write a JOIN to get student names with course names.","answer":"SELECT s.name, c.course_name\nFROM students s\nINNER JOIN enrollments e ON s.id = e.student_id\nINNER JOIN courses c ON e.course_id = c.id;"},
+        {"type":"theory","question":"What are views?","answer":"Views are virtual tables based on SELECT queries. Use for simplifying complex queries and data security."},
+        {"type":"coding","question":"Find the second highest salary.","answer":"SELECT MAX(salary) FROM employees\nWHERE salary < (SELECT MAX(salary) FROM employees);"},
+        {"type":"mcq","question":"Which JOIN returns matching rows from both tables?","options":["INNER JOIN","LEFT JOIN","RIGHT JOIN","FULL JOIN"],"answer":0,"explanation":"INNER JOIN returns only rows that have matching values in both tables."},
+        {"type":"mcq","question":"Which JOIN returns all rows from the left table and matching rows from the right table?","options":["RIGHT JOIN","INNER JOIN","LEFT JOIN","CROSS JOIN"],"answer":2,"explanation":"LEFT JOIN returns all records from the left table even if there are no matches in the right table."},
+        {"type":"mcq","question":"Which JOIN returns all rows from the right table and matching rows from the left table?","options":["LEFT JOIN","INNER JOIN","RIGHT JOIN","SELF JOIN"],"answer":2,"explanation":"RIGHT JOIN returns all records from the right table and matched rows from the left table."},
+        {"type":"mcq","question":"Which SQL clause is used to filter grouped records?","options":["WHERE","HAVING","ORDER BY","LIMIT"],"answer":1,"explanation":"HAVING filters grouped results after GROUP BY is applied."},
+        {"type":"mcq","question":"Which SQL command changes the structure of a table?","options":["UPDATE","ALTER","MODIFY","CHANGE"],"answer":1,"explanation":"ALTER TABLE modifies an existing table structure."},
+        {"type":"mcq","question":"Which constraint ensures unique values in a column?","options":["NOT NULL","PRIMARY KEY","DEFAULT","CHECK"],"answer":1,"explanation":"PRIMARY KEY uniquely identifies each row in a table."},
+        {"type":"mcq","question":"Which constraint prevents NULL values?","options":["UNIQUE","NOT NULL","CHECK","DEFAULT"],"answer":1,"explanation":"NOT NULL ensures a column cannot contain empty values."},
+        {"type":"mcq","question":"Which SQL keyword is used to rename a column or table?","options":["MODIFY","CHANGE","RENAME","ALTERNAME"],"answer":2,"explanation":"RENAME is used to change the name of database objects."},
+        {"type":"mcq","question":"Which operator is used to search for patterns?","options":["BETWEEN","LIKE","IN","EXISTS"],"answer":1,"explanation":"LIKE searches for specific patterns using wildcards."},
+        {"type":"mcq","question":"Which wildcard represents multiple characters in SQL?","options":["_","%","*","#"],"answer":1,"explanation":"% represents zero or more characters in pattern matching."},
+        {"type":"mcq","question":"Which wildcard represents a single character?","options":["%","*","_","#"],"answer":2,"explanation":"_ represents exactly one character in SQL LIKE patterns."},
+        {"type":"mcq","question":"Which SQL operator checks multiple possible values?","options":["BETWEEN","LIKE","IN","ALL"],"answer":2,"explanation":"IN allows checking multiple values in a WHERE clause."},
+        {"type":"mcq","question":"Which SQL operator checks a range of values?","options":["LIKE","IN","BETWEEN","RANGE"],"answer":2,"explanation":"BETWEEN selects values within a specified range."},
+        {"type":"mcq","question":"Which function converts text to uppercase?","options":["UPPER()","LOWER()","CAPITAL()","TEXTUP()"],"answer":0,"explanation":"UPPER() converts string values into uppercase letters."},
+        {"type":"mcq","question":"Which function converts text to lowercase?","options":["LOWER()","UPPER()","SMALL()","TEXTLOW()"],"answer":0,"explanation":"LOWER() converts string values into lowercase letters."},
+        {"type":"mcq","question":"Which SQL statement removes all rows but keeps the table structure?","options":["DELETE","DROP","TRUNCATE","REMOVE"],"answer":2,"explanation":"TRUNCATE removes all records while preserving the table."},
+        {"type":"mcq","question":"Which SQL keyword is used to sort results in descending order?","options":["ASC","DESC","DOWN","REVERSE"],"answer":1,"explanation":"DESC sorts query results in descending order."},
+        {"type":"mcq","question":"What is a foreign key?","options":["A key linking two tables","A password","A duplicate value","A backup key"],"answer":0,"explanation":"Foreign keys establish relationships between tables."},
+        {"type":"mcq","question":"Which SQL function returns the current date?","options":["NOW()","CURRENT_DATE()","DATE()","TODAY()"],"answer":1,"explanation":"CURRENT_DATE() returns the system's current date."},
+        {"type":"mcq","question":"Which SQL keyword combines results from two SELECT statements?","options":["MERGE","JOIN","UNION","CONNECT"],"answer":2,"explanation":"UNION combines results of multiple SELECT queries."}
+      ]
+    },
+    {
+      "id": "sql_advanced",
+      "name": "Advanced",
+      "level": 3,
+      "description": "Window functions, CTEs, optimization",
+      "unlock_score": 60,
+      "questions": [
+        {"type":"mcq","question":"What is a CTE?","options":["A permanent table","A temporary named result set","An index","A constraint"],"answer":1,"explanation":"CTE is a temporary result set defined with WITH clause."},
+        {"type":"mcq","question":"What is ACID?","options":["A query type","Atomicity Consistency Isolation Durability","A data type","An index method"],"answer":1,"explanation":"ACID ensures reliable transactions."},
+        {"type":"mcq","question":"Which assigns unique row numbers?","options":["RANK()","DENSE_RANK()","ROW_NUMBER()","NTILE()"],"answer":2,"explanation":"ROW_NUMBER() assigns unique sequential integers."},
+        {"type":"mcq","question":"What is a deadlock?","options":["A crashed server","Two transactions waiting for each other","A corrupted table","A failed query"],"answer":1,"explanation":"Deadlock is a circular lock dependency between transactions."},
+        {"type":"mcq","question":"What is query optimization?","options":["Shorter queries","Making queries faster and efficient","More indexes","Removing WHERE"],"answer":1,"explanation":"Optimization means restructuring queries for better performance."},
+        {"type":"theory","question":"Clustered vs non-clustered indexes?","answer":"Clustered physically reorders data (one per table). Non-clustered creates separate structure with pointers (multiple per table)."},
+        {"type":"interview","question":"How to optimize a slow query?","answer":"Use EXPLAIN, add indexes, avoid SELECT *, reduce subqueries, use EXISTS over IN, partition tables, avoid functions in WHERE."},
+        {"type":"coding","question":"Write a recursive CTE for employee hierarchy.","answer":"WITH RECURSIVE emp_tree AS (\n    SELECT id, name, manager_id, 1 as level\n    FROM employees WHERE manager_id IS NULL\n    UNION ALL\n    SELECT e.id, e.name, e.manager_id, t.level+1\n    FROM employees e JOIN emp_tree t ON e.manager_id = t.id\n)\nSELECT * FROM emp_tree;"},
+        {"type":"theory","question":"What are database triggers?","answer":"Triggers auto-execute on DML events (INSERT/UPDATE/DELETE). Use for audit logging and enforcing business rules."},
+        {"type":"coding","question":"Use window functions for running totals.","answer":"SELECT name, salary,\n    SUM(salary) OVER (ORDER BY salary) as running_total,\n    RANK() OVER (ORDER BY salary DESC) as rank\nFROM employees;"},
+        {"type":"mcq","question":"What is normalization in SQL?","options":["Process of organizing data to reduce redundancy","Sorting records alphabetically","Deleting duplicate rows","Encrypting databases"],"answer":0,"explanation":"Normalization structures database tables efficiently and minimizes duplicate data."},
+        {"type":"mcq","question":"Which normal form removes partial dependency?","options":["1NF","2NF","3NF","BCNF"],"answer":1,"explanation":"Second Normal Form removes partial dependency from tables."},
+        {"type":"mcq","question":"Which normal form removes transitive dependency?","options":["1NF","2NF","3NF","4NF"],"answer":2,"explanation":"Third Normal Form removes transitive dependencies."},
+        {"type":"mcq","question":"What is denormalization?","options":["Combining tables to improve read performance","Deleting all indexes","Removing databases","Compressing records"],"answer":0,"explanation":"Denormalization improves query performance by reducing joins."},
+        {"type":"mcq","question":"What is an index in SQL?","options":["A structure that improves query speed","A database backup","A table relationship","A SQL constraint"],"answer":0,"explanation":"Indexes speed up data retrieval operations."},
+        {"type":"mcq","question":"Which SQL command is used to create an index?","options":["MAKE INDEX","CREATE INDEX","NEW INDEX","ADD INDEX"],"answer":1,"explanation":"CREATE INDEX improves search performance on database columns."},
+        {"type":"mcq","question":"What is a view in SQL?","options":["A virtual table based on a query","A backup database","A physical storage file","A data type"],"answer":0,"explanation":"Views display data from one or more tables without storing it separately."},
+        {"type":"mcq","question":"Which command creates a view?","options":["CREATE VIEW","MAKE VIEW","NEW VIEW","ADD VIEW"],"answer":0,"explanation":"CREATE VIEW defines a virtual table from a SQL query."},
+        {"type":"mcq","question":"What is a stored procedure?","options":["A saved SQL program","A table relationship","A database index","A backup file"],"answer":0,"explanation":"Stored procedures contain reusable SQL statements."},
+        {"type":"mcq","question":"Which keyword is used to execute a stored procedure?","options":["RUN","EXEC","CALLPROC","START"],"answer":1,"explanation":"EXEC executes stored procedures in SQL."},
+        {"type":"mcq","question":"What is a trigger in SQL?","options":["A procedure automatically executed on events","A backup system","A sorting method","A cloud function"],"answer":0,"explanation":"Triggers automatically respond to INSERT, UPDATE, or DELETE events."},
+        {"type":"mcq","question":"Which SQL clause is used with aggregate functions after grouping?","options":["WHERE","HAVING","ORDER BY","LIMIT"],"answer":1,"explanation":"HAVING filters grouped data after aggregation."},
+        {"type":"mcq","question":"What is ACID in databases?","options":["Properties ensuring reliable transactions","A database language","A cloud platform","A programming framework"],"answer":0,"explanation":"ACID stands for Atomicity, Consistency, Isolation, and Durability."},
+        {"type":"mcq","question":"Which SQL command permanently saves transactions?","options":["SAVE","COMMIT","STORE","FINALIZE"],"answer":1,"explanation":"COMMIT permanently applies transaction changes."},
+        {"type":"mcq","question":"Which SQL command undoes transaction changes?","options":["UNDO","ROLLBACK","REVERSE","CANCEL"],"answer":1,"explanation":"ROLLBACK reverts changes made during a transaction."},
+        {"type":"mcq","question":"What is a subquery?","options":["A query inside another query","A backup query","A table index","A database schema"],"answer":0,"explanation":"Subqueries are nested queries used inside SQL statements."},
+        {"type":"mcq","question":"Which operator checks if a subquery returns records?","options":["EXISTS","CHECK","VERIFY","FOUND"],"answer":0,"explanation":"EXISTS tests whether a subquery contains rows."},
+        {"type":"mcq","question":"What is database sharding?","options":["Splitting a database into smaller parts","Deleting old records","Combining tables","Compressing indexes"],"answer":0,"explanation":"Sharding distributes data across multiple servers for scalability."},
+        {"type":"mcq","question":"What is replication in SQL databases?","options":["Copying database data across servers","Removing duplicate data","Sorting records","Encrypting queries"],"answer":0,"explanation":"Replication improves availability and backup reliability."},
+        {"type":"mcq","question":"Which SQL optimization technique improves query performance?","options":["Indexing","Deleting constraints","Removing tables","Duplicating rows"],"answer":0,"explanation":"Indexes help databases retrieve records much faster."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — ZIVRAJ AI Learning Hub</title>
+    <meta name="description" content="Login to ZIVRAJ AI Learning Hub">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="auth-body">
+    <div class="bg-particles"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="brand-icon"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="ZIVRAJ Logo" class="auth-logo-img"></div>
+            <h1>ZIVRAJ</h1>
+            <p>Login to your AI Learning Dashboard</p>
+            <form method="POST">
+                <input type="text" name="username" placeholder="Enter Username" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="/register">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>

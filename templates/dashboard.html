@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIVRAJ — AI Learning Dashboard</title>
+    <meta name="description" content="ZIVRAJ AI Learning Dashboard — Domain-based intelligent learning modules">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <div class="bg-particles"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+    <div class="app-layout">
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ZIVRAJ Logo" class="logo-img">
+                </div>
+                <h1 class="brand-name">ZIVRAJ</h1>
+                <span class="brand-tag">Chat bot Using NLP</span>
+            </div>
+
+            <nav class="domain-nav">
+                <div class="nav-label">GENERAL</div>
+                <button class="domain-btn active" id="domain-btn-general" onclick="backToGeneralChat()">
+                    <span class="domain-icon"><i data-lucide="message-circle"></i></span>
+                    <div class="domain-info">
+                        <span class="domain-name">General Chat</span>
+                        <span class="domain-desc">Ask anything across all domains</span>
+                    </div>
+                    <span class="domain-arrow"><i data-lucide="chevron-right" class="icon-xs"></i></span>
+                </button>
+                <div class="nav-label">LEARNING DOMAINS</div>
+                {% for domain in domains %}
+                <button class="domain-btn" data-domain="{{ domain.key }}" id="domain-btn-{{ domain.key }}">
+                    <span class="domain-icon"><i data-lucide="{{ domain.icon }}"></i></span>
+                    <div class="domain-info">
+                        <span class="domain-name">{{ domain.name }}</span>
+                        <span class="domain-desc">{{ domain.description }}</span>
+                    </div>
+                    <span class="domain-arrow"><i data-lucide="chevron-right" class="icon-xs"></i></span>
+                </button>
+                {% endfor %}
+            </nav>
+
+
+        </aside>
+
+        <!-- CENTER: Main Content -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
+                <div class="nav-breadcrumb">
+                    <span class="nav-home">ZIVRAJ</span>
+                    <span class="nav-sep"><i data-lucide="chevron-right" class="icon-xs"></i></span>
+                    <span class="nav-current" id="nav-current">Select a Domain</span>
+                </div>
+                <div class="nav-right">
+                    <div class="streak-badge" id="streak-badge">
+                        <span class="streak-icon"><i data-lucide="flame" class="icon-sm"></i></span>
+                        <span class="streak-count" id="streak-count">0</span>
+                    </div>
+                    <div class="nav-user">
+                        <span class="nav-username">{{ username }}</span>
+                        <div class="nav-avatar">{{ username[0]|upper }}</div>
+                        <a href="/logout" class="nav-logout-btn" title="Logout"><i data-lucide="log-out" class="icon-sm"></i></a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- General Chat Screen -->
+            <div class="general-chat-screen" id="general-chat-screen">
+                <div class="general-chat-messages" id="general-chat-messages">
+                    <div class="chat-landing" id="chat-landing">
+                        <div class="landing-avatar">
+                            <div class="ai-avatar-large">
+                                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ZIVRAJ" class="landing-logo-img">
+                                <div class="avatar-ring"></div>
+                                <div class="avatar-ring ring-2"></div>
+                            </div>
+                        </div>
+                        <h1 class="landing-title">Hi <span class="gradient-text">{{ username }}</span>, how can I help?</h1>
+                        <p class="landing-subtitle">Ask me anything about Python, ML, SQL, Cloud, or Interview prep</p>
+                        <div class="suggestion-chips">
+                            <button class="chip" onclick="askSuggestion('What is a variable in Python?')"><i data-lucide="code-2" class="icon-chip"></i> What is a variable in Python?</button>
+                            <button class="chip" onclick="askSuggestion('Explain supervised learning')"><i data-lucide="brain" class="icon-chip"></i> Explain supervised learning</button>
+                            <button class="chip" onclick="askSuggestion('What is a SQL join?')"><i data-lucide="database" class="icon-chip"></i> What is a SQL join?</button>
+                            <button class="chip" onclick="askSuggestion('What is cloud computing?')"><i data-lucide="cloud" class="icon-chip"></i> What is cloud computing?</button>
+                            <button class="chip" onclick="askSuggestion('How to answer tell me about yourself?')"><i data-lucide="briefcase" class="icon-chip"></i> Interview: Tell me about yourself</button>
+                            <button class="chip" onclick="askSuggestion('What is Docker?')"><i data-lucide="container" class="icon-chip"></i> What is Docker?</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="general-chat-input-bar">
+                    <div class="general-input-wrapper">
+                        <a href="/download_chat" class="input-action-btn" title="Download Chat"><i data-lucide="download" class="icon-sm"></i></a>
+                        <input type="text" id="general-input" placeholder="Ask ZIVRAJ anything..." onkeypress="handleGeneralKeyPress(event)">
+                        <button class="send-btn" onclick="sendGeneralMessage()" id="general-send-btn">
+                            <i data-lucide="send" class="icon-sm"></i>
+                        </button>
+                    </div>
+                    <span class="input-hint">ZIVRAJ can make mistakes. Verify important information.</span>
+                </div>
+            </div>
+
+            <!-- Domain Chat -->
+            <div class="workspace" id="workspace" style="display: none;">
+                <div class="chat-panel chat-panel-full">
+                    <div class="chat-header-bar">
+                        <div class="chat-domain-badge" id="chat-domain-badge">
+                            <span class="badge-icon" id="badge-icon"><i data-lucide="code-2"></i></span>
+                            <span class="badge-name" id="badge-name">Python</span>
+                        </div>
+                        <div class="chat-quiz-progress" id="chat-quiz-progress" style="display:none;">
+                            <span class="quiz-progress-text" id="quiz-progress-text">Question 1/10</span>
+                            <span class="quiz-score-text" id="quiz-score-text">Score: 0/0</span>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="icon-btn" onclick="backToGeneralChat()" title="Back to General Chat"><i data-lucide="home" class="icon-sm"></i></button>
+                            <button class="icon-btn" onclick="clearChat()" title="Clear Chat"><i data-lucide="trash-2" class="icon-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages"></div>
+                    <div class="chat-input-bar">
+                        <a href="/download_chat" class="input-action-btn" title="Download Chat"><i data-lucide="download" class="icon-sm"></i></a>
+                        <input type="text" id="user-input" placeholder="Type a, b, c, d to answer or ask a question..." onkeypress="handleKeyPress(event)">
+                        <button class="send-btn" onclick="sendMessage()" id="send-btn">
+                            <i data-lucide="send" class="icon-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>const USERNAME = "{{ username }}";</script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

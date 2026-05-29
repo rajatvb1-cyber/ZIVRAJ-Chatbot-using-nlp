@@ -1,0 +1,1010 @@
+{
+  "domain": "Cloud Computing",
+  "icon": "cloud",
+  "description": "Learn cloud computing from fundamentals to advanced architectures",
+  "welcome": "Welcome to Cloud Computing! Let's explore cloud services, deployment models, and modern cloud architecture together.",
+  "modules": [
+    {
+      "id": "cloud_beginner",
+      "name": "Beginner",
+      "level": 1,
+      "description": "Cloud fundamentals and service models",
+      "unlock_score": 0,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is Cloud Computing?",
+          "options": [
+            "A programming language",
+            "Delivering computing services over the internet",
+            "A database system",
+            "A type of hardware"
+          ],
+          "answer": 1,
+          "explanation": "Cloud computing delivers computing services (servers, storage, databases) over the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which is NOT a cloud deployment model?",
+          "options": [
+            "Public Cloud",
+            "Private Cloud",
+            "Hybrid Cloud",
+            "Local Cloud"
+          ],
+          "answer": 3,
+          "explanation": "The three main models are Public, Private, and Hybrid. There is no 'Local Cloud' model."
+        },
+        {
+          "type": "mcq",
+          "question": "What does IaaS stand for?",
+          "options": [
+            "Internet as a Service",
+            "Infrastructure as a Service",
+            "Integration as a Service",
+            "Information as a Service"
+          ],
+          "answer": 1,
+          "explanation": "IaaS provides virtualized computing resources over the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which is an example of SaaS?",
+          "options": [
+            "AWS EC2",
+            "Google Docs",
+            "Docker",
+            "Linux"
+          ],
+          "answer": 1,
+          "explanation": "Google Docs is SaaS - software delivered via the internet without installation."
+        },
+        {
+          "type": "mcq",
+          "question": "What is virtualization?",
+          "options": [
+            "Creating virtual hardware resources",
+            "A programming language",
+            "A database type",
+            "A network protocol"
+          ],
+          "answer": 0,
+          "explanation": "Virtualization creates virtual versions of servers, storage, or OS for better resource utilization."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the three cloud service models.",
+          "answer": "IaaS: Infrastructure (servers, VMs, storage). PaaS: Platform for development (Heroku, App Engine). SaaS: Complete software applications (Gmail, Office 365)."
+        },
+        {
+          "type": "interview",
+          "question": "What are the advantages of cloud computing?",
+          "answer": "Cost savings, scalability, accessibility, disaster recovery, automatic updates, pay-as-you-go pricing, global reach, and high availability."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python script to upload a file to AWS S3.",
+          "answer": "import boto3\n\ns3 = boto3.client('s3')\ns3.upload_file(\n    'local_file.txt',\n    'my-bucket-name',\n    'uploaded_file.txt'\n)\nprint('File uploaded successfully!')"
+        },
+        {
+          "type": "theory",
+          "question": "What is cloud storage?",
+          "answer": "Cloud storage stores data online accessible from anywhere via internet. Examples: Google Drive, AWS S3, Azure Blob Storage. Benefits: scalability, redundancy, accessibility."
+        },
+        {
+          "type": "coding",
+          "question": "Write code to list all S3 buckets using boto3.",
+          "answer": "import boto3\n\ns3 = boto3.client('s3')\nresponse = s3.list_buckets()\nfor bucket in response['Buckets']:\n    print(f'Bucket: {bucket[\"Name\"]}')"
+        },
+        {
+          "type": "mcq",
+          "question": "What is Cloud Computing?",
+          "options": [
+            "Delivery of computing services over the internet",
+            "A programming language",
+            "A database system",
+            "A hardware device"
+          ],
+          "answer": 0,
+          "explanation": "Cloud computing provides services like storage, servers, and software through the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which of the following is a cloud service provider?",
+          "options": [
+            "AWS",
+            "Python",
+            "Linux",
+            "MySQL"
+          ],
+          "answer": 0,
+          "explanation": "AWS (Amazon Web Services) is one of the most popular cloud platforms."
+        },
+        {
+          "type": "mcq",
+          "question": "What does AWS stand for?",
+          "options": [
+            "Amazon Web Services",
+            "Advanced Web System",
+            "Application Web Services",
+            "Automated Web Solution"
+          ],
+          "answer": 0,
+          "explanation": "AWS is Amazon's cloud computing platform."
+        },
+        {
+          "type": "mcq",
+          "question": "Which cloud model provides services to the general public?",
+          "options": [
+            "Private Cloud",
+            "Public Cloud",
+            "Hybrid Cloud",
+            "Local Cloud"
+          ],
+          "answer": 1,
+          "explanation": "Public cloud services are available to anyone over the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which cloud model is used only by a single organization?",
+          "options": [
+            "Public Cloud",
+            "Private Cloud",
+            "Hybrid Cloud",
+            "Community Cloud"
+          ],
+          "answer": 1,
+          "explanation": "Private clouds are dedicated to one organization for better control and security."
+        },
+        {
+          "type": "mcq",
+          "question": "What does SaaS stand for?",
+          "options": [
+            "Software as a Service",
+            "Storage as a Service",
+            "System as a Service",
+            "Security as a Service"
+          ],
+          "answer": 0,
+          "explanation": "SaaS delivers software applications over the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which is an example of SaaS?",
+          "options": [
+            "Google Docs",
+            "Virtual Machine",
+            "AWS EC2",
+            "Docker"
+          ],
+          "answer": 0,
+          "explanation": "Google Docs is a software application accessed through the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "What does PaaS stand for?",
+          "options": [
+            "Platform as a Service",
+            "Program as a Service",
+            "Process as a Service",
+            "Python as a Service"
+          ],
+          "answer": 0,
+          "explanation": "PaaS provides a platform for developers to build applications."
+        },
+        {
+          "type": "mcq",
+          "question": "What does IaaS stand for?",
+          "options": [
+            "Infrastructure as a Service",
+            "Internet as a Service",
+            "Integration as a Service",
+            "Instance as a Service"
+          ],
+          "answer": 0,
+          "explanation": "IaaS provides virtualized computing resources over the internet."
+        },
+        {
+          "type": "mcq",
+          "question": "Which cloud service model provides virtual machines?",
+          "options": [
+            "SaaS",
+            "PaaS",
+            "IaaS",
+            "DaaS"
+          ],
+          "answer": 2,
+          "explanation": "IaaS provides infrastructure resources like virtual machines and storage."
+        },
+        {
+          "type": "mcq",
+          "question": "Which company developed Microsoft Azure?",
+          "options": [
+            "Google",
+            "Amazon",
+            "Microsoft",
+            "IBM"
+          ],
+          "answer": 2,
+          "explanation": "Microsoft Azure is the cloud platform developed by Microsoft."
+        },
+        {
+          "type": "mcq",
+          "question": "Which Google cloud platform is used for cloud services?",
+          "options": [
+            "GCP",
+            "GDrive",
+            "GMail",
+            "Google Maps"
+          ],
+          "answer": 0,
+          "explanation": "GCP stands for Google Cloud Platform."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cloud storage?",
+          "options": [
+            "Saving data on remote servers",
+            "Saving data only on USB",
+            "Saving data on RAM",
+            "Saving data in BIOS"
+          ],
+          "answer": 0,
+          "explanation": "Cloud storage stores data online instead of local devices."
+        },
+        {
+          "type": "mcq",
+          "question": "Which device is NOT required for accessing cloud services?",
+          "options": [
+            "Internet connection",
+            "Computer or smartphone",
+            "Web browser",
+            "Printer"
+          ],
+          "answer": 3,
+          "explanation": "Cloud services can be accessed without a printer."
+        },
+        {
+          "type": "mcq",
+          "question": "What is scalability in cloud computing?",
+          "options": [
+            "Ability to increase or decrease resources",
+            "Deleting servers",
+            "Formatting databases",
+            "Reducing internet speed"
+          ],
+          "answer": 0,
+          "explanation": "Scalability allows cloud systems to adjust resources based on demand."
+        },
+        {
+          "type": "mcq",
+          "question": "What is virtualization?",
+          "options": [
+            "Creating virtual versions of resources",
+            "Deleting virtual machines",
+            "Building websites",
+            "Compressing files"
+          ],
+          "answer": 0,
+          "explanation": "Virtualization allows multiple virtual systems to run on one physical machine."
+        },
+        {
+          "type": "mcq",
+          "question": "Which of the following is a benefit of cloud computing?",
+          "options": [
+            "Cost efficiency",
+            "Limited access",
+            "Low scalability",
+            "Offline-only access"
+          ],
+          "answer": 0,
+          "explanation": "Cloud computing reduces hardware and maintenance costs."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a data center?",
+          "options": [
+            "A facility that stores computing resources",
+            "A programming language",
+            "A cloud model",
+            "A network cable"
+          ],
+          "answer": 0,
+          "explanation": "Data centers host servers, storage systems, and networking equipment."
+        },
+        {
+          "type": "mcq",
+          "question": "Which cloud deployment model combines public and private clouds?",
+          "options": [
+            "Hybrid Cloud",
+            "Private Cloud",
+            "Public Cloud",
+            "Local Cloud"
+          ],
+          "answer": 0,
+          "explanation": "Hybrid cloud combines features of both public and private clouds."
+        },
+        {
+          "type": "mcq",
+          "question": "Why is cloud computing popular?",
+          "options": [
+            "Easy access and scalability",
+            "Requires no internet",
+            "Only works offline",
+            "Cannot store data"
+          ],
+          "answer": 0,
+          "explanation": "Cloud computing provides flexibility, scalability, and remote access."
+        }
+      ]
+    },
+    {
+      "id": "cloud_intermediate",
+      "name": "Intermediate",
+      "level": 2,
+      "description": "AWS services, containers, and serverless",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is Docker?",
+          "options": [
+            "A cloud provider",
+            "A containerization platform",
+            "A database",
+            "A programming language"
+          ],
+          "answer": 1,
+          "explanation": "Docker packages applications and dependencies into portable containers."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Kubernetes used for?",
+          "options": [
+            "Database management",
+            "Container orchestration",
+            "Web hosting",
+            "Code compilation"
+          ],
+          "answer": 1,
+          "explanation": "Kubernetes automates deployment, scaling, and management of containerized applications."
+        },
+        {
+          "type": "mcq",
+          "question": "What is AWS Lambda?",
+          "options": [
+            "A virtual machine",
+            "A serverless compute service",
+            "A storage service",
+            "A database"
+          ],
+          "answer": 1,
+          "explanation": "Lambda runs code without provisioning servers - you pay only for compute time used."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a CDN?",
+          "options": [
+            "Central Data Network",
+            "Content Delivery Network",
+            "Cloud Database Node",
+            "Compute Distribution Network"
+          ],
+          "answer": 1,
+          "explanation": "A CDN distributes content across global edge locations for faster delivery."
+        },
+        {
+          "type": "mcq",
+          "question": "What is auto-scaling?",
+          "options": [
+            "Manual server addition",
+            "Automatic resource adjustment based on demand",
+            "Database backup",
+            "Code deployment"
+          ],
+          "answer": 1,
+          "explanation": "Auto-scaling automatically adjusts compute resources based on current demand."
+        },
+        {
+          "type": "theory",
+          "question": "Explain containers vs virtual machines.",
+          "answer": "VMs run full OS on hypervisor (heavy, slower). Containers share host OS kernel (lightweight, fast). Containers are more portable and resource-efficient."
+        },
+        {
+          "type": "interview",
+          "question": "How does serverless computing work?",
+          "answer": "Serverless runs code on-demand without managing servers. Provider handles scaling. You pay per execution. Examples: AWS Lambda, Azure Functions. Best for event-driven, microservices architectures."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Dockerfile for a Python Flask application.",
+          "answer": "FROM python:3.11-slim\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\nCOPY . .\nEXPOSE 5000\nCMD [\"python\", \"app.py\"]"
+        },
+        {
+          "type": "theory",
+          "question": "What is load balancing?",
+          "answer": "Load balancing distributes incoming traffic across multiple servers to ensure no single server is overwhelmed. Types: Round Robin, Least Connections, IP Hash."
+        },
+        {
+          "type": "coding",
+          "question": "Write a basic AWS Lambda handler function.",
+          "answer": "import json\n\ndef lambda_handler(event, context):\n    name = event.get('name', 'World')\n    return {\n        'statusCode': 200,\n        'body': json.dumps(f'Hello, {name}!')\n    }"
+        },
+        {
+          "type": "mcq",
+          "question": "What is an EC2 instance in AWS?",
+          "options": [
+            "A virtual server",
+            "A database",
+            "A programming language",
+            "A network cable"
+          ],
+          "answer": 0,
+          "explanation": "Amazon EC2 provides scalable virtual servers in the cloud."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service is mainly used for cloud storage?",
+          "options": [
+            "S3",
+            "EC2",
+            "Lambda",
+            "RDS"
+          ],
+          "answer": 0,
+          "explanation": "Amazon S3 is an object storage service used to store files and data."
+        },
+        {
+          "type": "mcq",
+          "question": "What does S3 stand for in AWS?",
+          "options": [
+            "Simple Storage Service",
+            "Secure System Storage",
+            "Scalable Storage Solution",
+            "System Storage Service"
+          ],
+          "answer": 0,
+          "explanation": "Amazon S3 is AWS's cloud object storage service."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service is used for relational databases?",
+          "options": [
+            "RDS",
+            "S3",
+            "CloudFront",
+            "Lambda"
+          ],
+          "answer": 0,
+          "explanation": "Amazon RDS manages relational databases in the cloud."
+        },
+        {
+          "type": "mcq",
+          "question": "What is serverless computing?",
+          "options": [
+            "Running code without managing servers",
+            "Removing all servers",
+            "Using offline systems",
+            "Deleting cloud storage"
+          ],
+          "answer": 0,
+          "explanation": "Serverless computing lets developers run code while the cloud provider manages infrastructure."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service supports serverless computing?",
+          "options": [
+            "Lambda",
+            "EC2",
+            "VPC",
+            "IAM"
+          ],
+          "answer": 0,
+          "explanation": "AWS Lambda executes code automatically without server management."
+        },
+        {
+          "type": "mcq",
+          "question": "What is auto-scaling in cloud computing?",
+          "options": [
+            "Automatically adjusting resources based on demand",
+            "Deleting unused servers",
+            "Compressing files",
+            "Reducing storage size"
+          ],
+          "answer": 0,
+          "explanation": "Auto-scaling increases or decreases resources automatically."
+        },
+        {
+          "type": "mcq",
+          "question": "What is load balancing?",
+          "options": [
+            "Distributing traffic across servers",
+            "Deleting excess traffic",
+            "Compressing networks",
+            "Managing passwords"
+          ],
+          "answer": 0,
+          "explanation": "Load balancers improve performance and availability by sharing traffic."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service distributes traffic across servers?",
+          "options": [
+            "Elastic Load Balancer",
+            "EC2",
+            "S3",
+            "IAM"
+          ],
+          "answer": 0,
+          "explanation": "Elastic Load Balancer distributes incoming application traffic."
+        },
+        {
+          "type": "mcq",
+          "question": "What is IAM in AWS?",
+          "options": [
+            "Identity and Access Management",
+            "Internet Access Module",
+            "Integrated AWS Monitoring",
+            "Internal Application Manager"
+          ],
+          "answer": 0,
+          "explanation": "IAM controls user permissions and access in AWS."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a virtual machine?",
+          "options": [
+            "Software-based computer system",
+            "Physical keyboard",
+            "Cloud database",
+            "Internet browser"
+          ],
+          "answer": 0,
+          "explanation": "Virtual machines simulate physical computers using software."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Docker mainly used for?",
+          "options": [
+            "Containerization",
+            "Database backup",
+            "Image editing",
+            "Networking"
+          ],
+          "answer": 0,
+          "explanation": "Docker packages applications and dependencies into containers."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a container in cloud computing?",
+          "options": [
+            "A lightweight isolated application environment",
+            "A physical storage box",
+            "A programming language",
+            "A network router"
+          ],
+          "answer": 0,
+          "explanation": "Containers package applications with their dependencies."
+        },
+        {
+          "type": "mcq",
+          "question": "Which platform is commonly used for container orchestration?",
+          "options": [
+            "Kubernetes",
+            "NumPy",
+            "Flask",
+            "Photoshop"
+          ],
+          "answer": 0,
+          "explanation": "Kubernetes automates deployment and scaling of containers."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cloud security?",
+          "options": [
+            "Protecting cloud systems and data",
+            "Deleting user accounts",
+            "Reducing internet speed",
+            "Formatting servers"
+          ],
+          "answer": 0,
+          "explanation": "Cloud security involves protecting cloud infrastructure and applications."
+        },
+        {
+          "type": "mcq",
+          "question": "What is encryption in cloud computing?",
+          "options": [
+            "Converting data into secure format",
+            "Deleting data",
+            "Compressing files",
+            "Copying databases"
+          ],
+          "answer": 0,
+          "explanation": "Encryption protects sensitive data from unauthorized access."
+        },
+        {
+          "type": "mcq",
+          "question": "Which cloud service model gives developers a ready-made platform?",
+          "options": [
+            "PaaS",
+            "IaaS",
+            "SaaS",
+            "DaaS"
+          ],
+          "answer": 0,
+          "explanation": "PaaS provides development tools and environments."
+        },
+        {
+          "type": "mcq",
+          "question": "What is latency in cloud computing?",
+          "options": [
+            "Delay in data communication",
+            "Storage size",
+            "CPU speed",
+            "Programming syntax"
+          ],
+          "answer": 0,
+          "explanation": "Latency measures the time taken for data transfer."
+        },
+        {
+          "type": "mcq",
+          "question": "What is CDN in cloud computing?",
+          "options": [
+            "Content Delivery Network",
+            "Cloud Data Node",
+            "Central Database Network",
+            "Computer Delivery Node"
+          ],
+          "answer": 0,
+          "explanation": "CDNs deliver content faster by using distributed servers."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service is used as a CDN?",
+          "options": [
+            "CloudFront",
+            "Lambda",
+            "EC2",
+            "Route53"
+          ],
+          "answer": 0,
+          "explanation": "Amazon CloudFront is AWS's content delivery network service."
+        }
+      ]
+    },
+    {
+      "id": "cloud_advanced",
+      "name": "Advanced",
+      "level": 3,
+      "description": "Cloud architecture, security, and DevOps",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is a microservices architecture?",
+          "options": [
+            "One large application",
+            "Small independent services communicating via APIs",
+            "A database pattern",
+            "A testing framework"
+          ],
+          "answer": 1,
+          "explanation": "Microservices break applications into small, independently deployable services."
+        },
+        {
+          "type": "mcq",
+          "question": "What is CI/CD?",
+          "options": [
+            "Cloud Infrastructure/Cloud Delivery",
+            "Continuous Integration/Continuous Deployment",
+            "Computer Interface/Computer Design",
+            "Code Inspection/Code Delivery"
+          ],
+          "answer": 1,
+          "explanation": "CI/CD automates building, testing, and deploying code changes."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Infrastructure as Code (IaC)?",
+          "options": [
+            "Writing code on cloud",
+            "Managing infrastructure through code/config files",
+            "A programming language",
+            "Database automation"
+          ],
+          "answer": 1,
+          "explanation": "IaC manages and provisions infrastructure through machine-readable config files (Terraform, CloudFormation)."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a VPC?",
+          "options": [
+            "Virtual Private Cloud",
+            "Virtual Public Computer",
+            "Very Private Connection",
+            "Virtual Processing Center"
+          ],
+          "answer": 0,
+          "explanation": "VPC is an isolated section of the cloud where you can launch resources in a virtual network you define."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the shared responsibility model?",
+          "options": [
+            "Everyone shares one account",
+            "Cloud provider and customer share security duties",
+            "Open source licensing",
+            "Team coding practices"
+          ],
+          "answer": 1,
+          "explanation": "Provider secures the cloud infrastructure; customer secures what they put in the cloud."
+        },
+        {
+          "type": "theory",
+          "question": "Explain cloud-native application design principles.",
+          "answer": "12-factor app methodology: codebase in version control, explicit dependencies, config in environment, stateless processes, port binding, horizontal scaling, disposability, dev/prod parity, logging as event streams, admin processes as one-offs."
+        },
+        {
+          "type": "interview",
+          "question": "How do you design for high availability in the cloud?",
+          "answer": "Multi-AZ deployment, load balancing, auto-scaling, database replication, health checks, failover mechanisms, CDN for static content, stateless application design, disaster recovery plan."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Terraform config to create an AWS EC2 instance.",
+          "answer": "provider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_instance\" \"web\" {\n  ami           = \"ami-0c55b159cbfafe1f0\"\n  instance_type = \"t2.micro\"\n\n  tags = {\n    Name = \"WebServer\"\n  }\n}"
+        },
+        {
+          "type": "theory",
+          "question": "What is service mesh?",
+          "answer": "A service mesh is a dedicated infrastructure layer for service-to-service communication. It handles load balancing, encryption, observability, and traffic management. Examples: Istio, Linkerd."
+        },
+        {
+          "type": "coding",
+          "question": "Write a GitHub Actions CI/CD pipeline for a Python app.",
+          "answer": "name: CI/CD Pipeline\non:\n  push:\n    branches: [main]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: actions/setup-python@v4\n        with:\n          python-version: '3.11'\n      - run: pip install -r requirements.txt\n      - run: python -m pytest"
+        },
+        {
+          "type": "mcq",
+          "question": "What is Kubernetes mainly used for?",
+          "options": [
+            "Container orchestration",
+            "Database management",
+            "Web designing",
+            "Image editing"
+          ],
+          "answer": 0,
+          "explanation": "Kubernetes automates deployment, scaling, and management of containers."
+        },
+        {
+          "type": "mcq",
+          "question": "What is Infrastructure as Code (IaC)?",
+          "options": [
+            "Managing infrastructure using code",
+            "Writing website HTML",
+            "Creating databases manually",
+            "Formatting cloud storage"
+          ],
+          "answer": 0,
+          "explanation": "IaC automates infrastructure setup using scripts and configuration files."
+        },
+        {
+          "type": "mcq",
+          "question": "Which tool is commonly used for Infrastructure as Code?",
+          "options": [
+            "Terraform",
+            "Photoshop",
+            "NumPy",
+            "Excel"
+          ],
+          "answer": 0,
+          "explanation": "Terraform is widely used to automate cloud infrastructure deployment."
+        },
+        {
+          "type": "mcq",
+          "question": "What is CI/CD in cloud computing?",
+          "options": [
+            "Continuous Integration and Continuous Deployment",
+            "Cloud Internet and Cloud Data",
+            "Centralized Integration and Code Deployment",
+            "Continuous Infrastructure and Cloud Delivery"
+          ],
+          "answer": 0,
+          "explanation": "CI/CD automates software building, testing, and deployment processes."
+        },
+        {
+          "type": "mcq",
+          "question": "Which tool is commonly used for CI/CD pipelines?",
+          "options": [
+            "Jenkins",
+            "Tkinter",
+            "MySQL",
+            "Canva"
+          ],
+          "answer": 0,
+          "explanation": "Jenkins automates software testing and deployment workflows."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a microservices architecture?",
+          "options": [
+            "Application divided into small independent services",
+            "Single large application",
+            "Database clustering",
+            "Cloud storage method"
+          ],
+          "answer": 0,
+          "explanation": "Microservices break applications into smaller independently deployable services."
+        },
+        {
+          "type": "mcq",
+          "question": "What is multi-cloud computing?",
+          "options": [
+            "Using multiple cloud providers",
+            "Using one local server",
+            "Using only AWS",
+            "Using offline systems"
+          ],
+          "answer": 0,
+          "explanation": "Multi-cloud strategies use services from multiple cloud platforms."
+        },
+        {
+          "type": "mcq",
+          "question": "What is disaster recovery in cloud computing?",
+          "options": [
+            "Restoring systems after failures",
+            "Deleting damaged servers",
+            "Formatting cloud databases",
+            "Stopping backups"
+          ],
+          "answer": 0,
+          "explanation": "Disaster recovery helps recover applications and data after failures."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cloud migration?",
+          "options": [
+            "Moving applications and data to the cloud",
+            "Deleting servers",
+            "Reducing storage",
+            "Installing operating systems"
+          ],
+          "answer": 0,
+          "explanation": "Cloud migration transfers systems from local infrastructure to cloud platforms."
+        },
+        {
+          "type": "mcq",
+          "question": "Which AWS service provides DNS management?",
+          "options": [
+            "Route 53",
+            "CloudFront",
+            "Lambda",
+            "EC2"
+          ],
+          "answer": 0,
+          "explanation": "Amazon Route 53 is a scalable DNS web service."
+        },
+        {
+          "type": "mcq",
+          "question": "What is edge computing?",
+          "options": [
+            "Processing data closer to users",
+            "Storing files offline",
+            "Building websites",
+            "Compressing cloud data"
+          ],
+          "answer": 0,
+          "explanation": "Edge computing reduces latency by processing data near its source."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a hybrid cloud?",
+          "options": [
+            "Combination of public and private clouds",
+            "A cloud without internet",
+            "A local storage system",
+            "A single server"
+          ],
+          "answer": 0,
+          "explanation": "Hybrid cloud combines private infrastructure with public cloud services."
+        },
+        {
+          "type": "mcq",
+          "question": "What is fault tolerance in cloud computing?",
+          "options": [
+            "Ability to continue operating during failures",
+            "Stopping all services",
+            "Deleting faulty data",
+            "Reducing CPU usage"
+          ],
+          "answer": 0,
+          "explanation": "Fault tolerance ensures systems continue functioning even when failures occur."
+        },
+        {
+          "type": "mcq",
+          "question": "What is elasticity in cloud computing?",
+          "options": [
+            "Automatic resource adjustment",
+            "Compressing databases",
+            "Deleting servers",
+            "Reducing bandwidth"
+          ],
+          "answer": 0,
+          "explanation": "Elasticity allows cloud systems to dynamically scale resources."
+        },
+        {
+          "type": "mcq",
+          "question": "What is DevOps in cloud computing?",
+          "options": [
+            "Collaboration between development and operations teams",
+            "Database optimization",
+            "Image rendering",
+            "Cloud backup method"
+          ],
+          "answer": 0,
+          "explanation": "DevOps improves software delivery using automation and collaboration."
+        },
+        {
+          "type": "mcq",
+          "question": "Which service monitors AWS resources and applications?",
+          "options": [
+            "CloudWatch",
+            "Route 53",
+            "S3",
+            "IAM"
+          ],
+          "answer": 0,
+          "explanation": "Amazon CloudWatch monitors applications, logs, and cloud resources."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a VPC in AWS?",
+          "options": [
+            "Virtual Private Cloud",
+            "Virtual Processing Center",
+            "Verified Public Cloud",
+            "Variable Private Connection"
+          ],
+          "answer": 0,
+          "explanation": "VPC provides an isolated virtual network within AWS."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cloud monitoring?",
+          "options": [
+            "Tracking cloud resource performance",
+            "Deleting unused resources",
+            "Creating virtual machines",
+            "Compressing applications"
+          ],
+          "answer": 0,
+          "explanation": "Cloud monitoring tracks system health, performance, and availability."
+        },
+        {
+          "type": "mcq",
+          "question": "What is high availability in cloud computing?",
+          "options": [
+            "Ensuring systems remain operational with minimal downtime",
+            "Increasing storage size",
+            "Reducing internet speed",
+            "Deleting failed servers"
+          ],
+          "answer": 0,
+          "explanation": "High availability minimizes service interruptions."
+        },
+        {
+          "type": "mcq",
+          "question": "What is cloud orchestration?",
+          "options": [
+            "Automating cloud resource management",
+            "Creating databases manually",
+            "Writing frontend code",
+            "Formatting servers"
+          ],
+          "answer": 0,
+          "explanation": "Cloud orchestration coordinates automated cloud tasks and workflows."
+        }
+      ]
+    }
+  ]
+}

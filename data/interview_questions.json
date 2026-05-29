@@ -1,0 +1,530 @@
+{
+  "domain": "Interview Guidance",
+  "icon": "briefcase",
+  "description": "Prepare for technical and HR interviews with confidence",
+  "welcome": "Welcome to Interview Guidance! Let's prepare you for technical and HR interviews with practice questions and expert tips.",
+  "modules": [
+    {
+      "id": "interview_beginner",
+      "name": "Beginner",
+      "level": 1,
+      "description": "HR basics and self-introduction",
+      "unlock_score": 0,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the most important thing in self-introduction?",
+          "options": [
+            "Speaking fast",
+            "Being brief, relevant, and confident",
+            "Memorizing a script",
+            "Listing all hobbies"
+          ],
+          "answer": 1,
+          "explanation": "A good introduction is concise, highlights relevant skills, and shows confidence."
+        },
+        {
+          "type": "mcq",
+          "question": "How should you dress for an interview?",
+          "options": [
+            "Casual wear",
+            "Professional/formal attire",
+            "Sports wear",
+            "Any comfortable clothes"
+          ],
+          "answer": 1,
+          "explanation": "Professional attire shows respect for the opportunity and creates a good first impression."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you research before an interview?",
+          "options": [
+            "Nothing",
+            "The company, role, and interviewer",
+            "Only salary",
+            "Only location"
+          ],
+          "answer": 1,
+          "explanation": "Research the company's mission, products, culture, recent news, and the specific role requirements."
+        },
+        {
+          "type": "mcq",
+          "question": "When asked 'Tell me about yourself', you should:",
+          "options": [
+            "Tell your life story",
+            "Give a 2-minute professional summary",
+            "Talk about personal problems",
+            "Ask them to be specific"
+          ],
+          "answer": 1,
+          "explanation": "Give a concise professional summary: education, skills, experience, and career goals."
+        },
+        {
+          "type": "mcq",
+          "question": "What body language shows confidence?",
+          "options": [
+            "Crossed arms",
+            "Eye contact and upright posture",
+            "Looking down",
+            "Fidgeting"
+          ],
+          "answer": 1,
+          "explanation": "Maintain eye contact, sit upright, smile naturally, and use open hand gestures."
+        },
+        {
+          "type": "theory",
+          "question": "How to answer 'What are your strengths?'",
+          "answer": "Choose strengths relevant to the role. Structure: Name the strength, give context, provide a specific example. E.g., 'I am a strong problem solver - in my recent project, I debugged a complex issue that saved 3 hours of team time.'"
+        },
+        {
+          "type": "interview",
+          "question": "How to answer 'Why should we hire you?'",
+          "answer": "Match your skills to job requirements. Mention: relevant technical skills, willingness to learn, team collaboration ability, and specific value you can add. Be specific with examples."
+        },
+        {
+          "type": "theory",
+          "question": "How to handle 'What are your weaknesses?'",
+          "answer": "Choose a real but non-critical weakness. Show self-awareness and improvement efforts. E.g., 'I sometimes overthink solutions, but I've been improving by setting time limits and seeking quick feedback.'"
+        },
+        {
+          "type": "interview",
+          "question": "What questions should you ask at the end?",
+          "answer": "Ask about: team structure, technologies used, growth opportunities, typical day, company culture, next steps in the process. Avoid asking about salary in first round."
+        },
+        {
+          "type": "theory",
+          "question": "How to explain gaps in your resume?",
+          "answer": "Be honest and positive. Focus on what you did during the gap: learning new skills, freelancing, personal development. Show how the gap made you a better candidate."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you do before attending an interview?",
+          "options": [
+            "Research the company",
+            "Ignore the job description",
+            "Arrive late",
+            "Avoid preparation"
+          ],
+          "answer": 0,
+          "explanation": "Understanding the company and role helps you answer confidently."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the best way to answer 'Tell me about yourself'?",
+          "options": [
+            "Give a structured introduction about education, skills, and goals",
+            "Talk only about hobbies",
+            "Discuss unrelated topics",
+            "Stay silent"
+          ],
+          "answer": 0,
+          "explanation": "A professional introduction creates a strong first impression."
+        },
+        {
+          "type": "mcq",
+          "question": "Which communication skill is important in interviews?",
+          "options": [
+            "Clear communication",
+            "Ignoring questions",
+            "Speaking too fast",
+            "Interrupting interviewers"
+          ],
+          "answer": 0,
+          "explanation": "Clear communication helps interviewers understand your thoughts effectively."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you wear for most professional interviews?",
+          "options": [
+            "Formal or neat attire",
+            "Party wear",
+            "Sportswear",
+            "Nightwear"
+          ],
+          "answer": 0,
+          "explanation": "Professional dressing creates a positive impression."
+        },
+        {
+          "type": "mcq",
+          "question": "Why is punctuality important in interviews?",
+          "options": [
+            "It shows professionalism",
+            "It reduces salary",
+            "It avoids preparation",
+            "It is not important"
+          ],
+          "answer": 0,
+          "explanation": "Arriving on time demonstrates responsibility and seriousness."
+        },
+        {
+          "type": "mcq",
+          "question": "How should you respond if you don't know an answer?",
+          "options": [
+            "Honestly admit it and try to explain your approach",
+            "Panic immediately",
+            "Give random answers",
+            "Stay completely silent"
+          ],
+          "answer": 0,
+          "explanation": "Interviewers value honesty and problem-solving thinking."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of a resume?",
+          "options": [
+            "To summarize qualifications and experience",
+            "To store passwords",
+            "To create databases",
+            "To design websites"
+          ],
+          "answer": 0,
+          "explanation": "A resume highlights your education, skills, and achievements."
+        },
+        {
+          "type": "mcq",
+          "question": "Which is a common strength to mention in interviews?",
+          "options": [
+            "Problem-solving ability",
+            "Avoiding teamwork",
+            "Ignoring deadlines",
+            "Poor communication"
+          ],
+          "answer": 0,
+          "explanation": "Problem-solving is highly valued in technical and non-technical roles."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you do after an interview?",
+          "options": [
+            "Send a thank-you message",
+            "Ignore all communication",
+            "Delete company emails",
+            "Complain online"
+          ],
+          "answer": 0,
+          "explanation": "A thank-you message shows professionalism and appreciation."
+        },
+        {
+          "type": "mcq",
+          "question": "What is body language?",
+          "options": [
+            "Non-verbal communication through gestures and posture",
+            "Programming syntax",
+            "Database structure",
+            "Internet protocol"
+          ],
+          "answer": 0,
+          "explanation": "Positive body language improves confidence and communication."
+        },
+        {
+          "type": "mcq",
+          "question": "Which of the following is good interview etiquette?",
+          "options": [
+            "Listening carefully before answering",
+            "Interrupting the interviewer",
+            "Using rude language",
+            "Checking your phone constantly"
+          ],
+          "answer": 0,
+          "explanation": "Active listening helps provide accurate and thoughtful answers."
+        },
+        {
+          "type": "mcq",
+          "question": "Why are mock interviews useful?",
+          "options": [
+            "They improve confidence and practice",
+            "They waste time",
+            "They replace resumes",
+            "They guarantee jobs"
+          ],
+          "answer": 0,
+          "explanation": "Mock interviews help identify strengths and weaknesses."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you highlight in technical interviews?",
+          "options": [
+            "Projects and practical skills",
+            "Only hobbies",
+            "Personal gossip",
+            "Unrelated experiences"
+          ],
+          "answer": 0,
+          "explanation": "Projects demonstrate hands-on knowledge and abilities."
+        },
+        {
+          "type": "mcq",
+          "question": "How should you answer behavioral questions?",
+          "options": [
+            "Using real examples and structured responses",
+            "Giving one-word answers",
+            "Changing the topic",
+            "Ignoring the question"
+          ],
+          "answer": 0,
+          "explanation": "Real-life examples make your answers stronger and more believable."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the STAR method used for?",
+          "options": [
+            "Answering behavioral interview questions",
+            "Writing SQL queries",
+            "Building websites",
+            "Cloud deployment"
+          ],
+          "answer": 0,
+          "explanation": "STAR stands for Situation, Task, Action, and Result."
+        },
+        {
+          "type": "mcq",
+          "question": "What should you do if asked about weaknesses?",
+          "options": [
+            "Mention a real weakness and explain improvement efforts",
+            "Say you have no weaknesses",
+            "Refuse to answer",
+            "Blame others"
+          ],
+          "answer": 0,
+          "explanation": "This shows self-awareness and willingness to improve."
+        },
+        {
+          "type": "mcq",
+          "question": "Which skill is important for teamwork questions?",
+          "options": [
+            "Collaboration",
+            "Avoiding communication",
+            "Ignoring teammates",
+            "Working alone always"
+          ],
+          "answer": 0,
+          "explanation": "Companies value employees who work effectively with teams."
+        },
+        {
+          "type": "mcq",
+          "question": "Why should you ask questions at the end of an interview?",
+          "options": [
+            "To show interest in the role and company",
+            "To waste time",
+            "To confuse interviewers",
+            "To end the interview quickly"
+          ],
+          "answer": 0,
+          "explanation": "Thoughtful questions show enthusiasm and preparation."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the best way to improve interview performance?",
+          "options": [
+            "Practice regularly",
+            "Avoid preparation",
+            "Memorize random answers",
+            "Ignore feedback"
+          ],
+          "answer": 0,
+          "explanation": "Consistent practice improves confidence and communication skills."
+        },
+        {
+          "type": "mcq",
+          "question": "Which quality do employers value highly?",
+          "options": [
+            "Adaptability",
+            "Carelessness",
+            "Lack of communication",
+            "Avoiding responsibility"
+          ],
+          "answer": 0,
+          "explanation": "Adaptability helps employees handle changing situations effectively."
+        }
+      ]
+    },
+    {
+      "id": "interview_intermediate",
+      "name": "Intermediate",
+      "level": 2,
+      "description": "Technical interview strategies",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "In a coding interview, what should you do first?",
+          "options": [
+            "Start coding immediately",
+            "Understand the problem and ask clarifying questions",
+            "Write test cases",
+            "Optimize the solution"
+          ],
+          "answer": 1,
+          "explanation": "Always understand requirements first. Ask about edge cases, constraints, and expected input/output."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the STAR method?",
+          "options": [
+            "A rating system",
+            "Situation, Task, Action, Result",
+            "A coding technique",
+            "Star pattern printing"
+          ],
+          "answer": 1,
+          "explanation": "STAR structures behavioral answers: describe the Situation, your Task, Actions taken, and Results achieved."
+        },
+        {
+          "type": "mcq",
+          "question": "How should you handle a question you don't know?",
+          "options": [
+            "Make up an answer",
+            "Be honest and show willingness to learn",
+            "Stay silent",
+            "Change the topic"
+          ],
+          "answer": 1,
+          "explanation": "Honesty is valued. Say what you do know, explain your thought process, and express eagerness to learn."
+        },
+        {
+          "type": "mcq",
+          "question": "What is whiteboard coding?",
+          "options": [
+            "Drawing diagrams",
+            "Solving coding problems on a whiteboard/shared editor",
+            "Testing code",
+            "Writing documentation"
+          ],
+          "answer": 1,
+          "explanation": "Whiteboard coding tests problem-solving, communication, and coding ability in real-time."
+        },
+        {
+          "type": "mcq",
+          "question": "What matters most in a system design interview?",
+          "options": [
+            "Perfect solution",
+            "Clear thinking process and trade-off analysis",
+            "Speed of answer",
+            "Code syntax"
+          ],
+          "answer": 1,
+          "explanation": "Interviewers evaluate your thought process, ability to identify requirements, and make informed trade-offs."
+        },
+        {
+          "type": "theory",
+          "question": "How to approach a coding problem in an interview?",
+          "answer": "1) Understand the problem, 2) Identify edge cases, 3) Discuss approach before coding, 4) Write clean code, 5) Test with examples, 6) Analyze time/space complexity, 7) Discuss optimizations."
+        },
+        {
+          "type": "interview",
+          "question": "How to answer 'Where do you see yourself in 5 years?'",
+          "answer": "Show ambition aligned with the company. Mention: growing in the role, taking on leadership, mastering technologies, contributing to team success. Avoid: 'I want your job' or unrelated goals."
+        },
+        {
+          "type": "theory",
+          "question": "How to handle behavioral interview questions?",
+          "answer": "Use STAR method. Prepare stories for: teamwork, conflict resolution, leadership, failure, achievement. Be specific with numbers and outcomes. Practice common scenarios."
+        },
+        {
+          "type": "interview",
+          "question": "How to negotiate salary?",
+          "answer": "Research market rates. Wait for them to name a number first. Express enthusiasm for the role. Provide a range based on research. Consider total compensation. Be professional and flexible."
+        },
+        {
+          "type": "theory",
+          "question": "Common mistakes in technical interviews?",
+          "answer": "Not asking clarifying questions, jumping to code without planning, ignoring edge cases, poor communication, not testing solution, giving up too quickly, not analyzing complexity."
+        }
+      ]
+    },
+    {
+      "id": "interview_advanced",
+      "name": "Advanced",
+      "level": 3,
+      "description": "System design and leadership interviews",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "In system design, what should you clarify first?",
+          "options": [
+            "Database choice",
+            "Functional and non-functional requirements",
+            "API design",
+            "Technology stack"
+          ],
+          "answer": 1,
+          "explanation": "Start by understanding what the system should do (functional) and quality attributes (scale, latency, availability)."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the CAP theorem?",
+          "options": [
+            "A coding principle",
+            "Consistency, Availability, Partition tolerance trade-off",
+            "A design pattern",
+            "A testing method"
+          ],
+          "answer": 1,
+          "explanation": "CAP theorem states distributed systems can guarantee only 2 of 3: Consistency, Availability, Partition tolerance."
+        },
+        {
+          "type": "mcq",
+          "question": "What makes a good technical leader?",
+          "options": [
+            "Writing the most code",
+            "Mentoring, decision-making, and enabling team success",
+            "Being the smartest",
+            "Working alone"
+          ],
+          "answer": 1,
+          "explanation": "Technical leadership involves mentoring, making informed decisions, removing blockers, and enabling team productivity."
+        },
+        {
+          "type": "mcq",
+          "question": "How to handle disagreement with a manager?",
+          "options": [
+            "Always agree",
+            "Present data-driven arguments respectfully",
+            "Complain to others",
+            "Ignore the issue"
+          ],
+          "answer": 1,
+          "explanation": "Use facts and data. Present alternatives. Be respectful. Ultimately, support the decision once made."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the most important quality in a senior engineer?",
+          "options": [
+            "Speed of coding",
+            "Impact and influence on the team/organization",
+            "Years of experience",
+            "Number of languages known"
+          ],
+          "answer": 1,
+          "explanation": "Senior engineers are valued for their impact: mentoring, architecture decisions, and improving team effectiveness."
+        },
+        {
+          "type": "theory",
+          "question": "How to design a URL shortener system?",
+          "answer": "Requirements: shorten URLs, redirect, analytics. Components: API Gateway, Application Server, Database (NoSQL for speed), Cache (Redis). Hash function for short codes. Handle collisions. Scale with load balancer and multiple servers."
+        },
+        {
+          "type": "interview",
+          "question": "Tell me about a time you failed and what you learned.",
+          "answer": "Use STAR method. Be genuine about the failure. Focus on lessons learned and actions taken to prevent recurrence. Show growth mindset and accountability. Example: missed a deadline, learned to break tasks smaller and communicate earlier."
+        },
+        {
+          "type": "theory",
+          "question": "How to approach system design interviews?",
+          "answer": "1) Clarify requirements (5 min), 2) High-level design (10 min), 3) Deep dive into components (15 min), 4) Address bottlenecks and scaling (10 min), 5) Wrap up with trade-offs. Always think aloud."
+        },
+        {
+          "type": "interview",
+          "question": "How do you handle tight deadlines?",
+          "answer": "Prioritize tasks by impact, communicate early about risks, break work into smaller deliverables, focus on MVP first, delegate where possible, avoid perfectionism, and maintain quality standards."
+        },
+        {
+          "type": "theory",
+          "question": "How to demonstrate leadership in interviews?",
+          "answer": "Share examples of: mentoring juniors, leading projects, making technical decisions, resolving conflicts, driving improvements, taking ownership of failures, and celebrating team successes."
+        }
+      ]
+    }
+  ]
+}

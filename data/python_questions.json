@@ -1,0 +1,635 @@
+{
+  "domain": "Python",
+  "icon": "code-2",
+  "description": "Master Python programming from basics to advanced concepts",
+  "welcome": "Welcome to the Python Learning Module! I'm your AI tutor. Let's master Python programming together — from variables to advanced OOP concepts.",
+  "modules": [
+    {
+      "id": "python_beginner",
+      "name": "Beginner",
+      "level": 1,
+      "description": "Python fundamentals — variables, data types, operators, and basic I/O",
+      "unlock_score": 0,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the correct way to declare a variable in Python?",
+          "options": ["var x = 10", "int x = 10", "x = 10", "declare x = 10"],
+          "answer": 2,
+          "explanation": "In Python, variables are dynamically typed. You simply write the variable name followed by = and the value. No type declaration needed."
+        },
+        {
+          "type": "mcq",
+          "question": "Which of the following is a valid Python data type?",
+          "options": ["integer", "char", "float", "double"],
+          "answer": 2,
+          "explanation": "Python uses 'float' for decimal numbers. There is no 'char' or 'double' type in Python. 'int' is used instead of 'integer'."
+        },
+        {
+          "type": "mcq",
+          "question": "What will print(type(10)) output?",
+          "options": ["<class 'number'>", "<class 'int'>", "<class 'integer'>", "<class 'float'>"],
+          "answer": 1,
+          "explanation": "The type() function returns the class type of the object. 10 is an integer, so it returns <class 'int'>."
+        },
+        {
+          "type": "mcq",
+          "question": "Which operator is used for floor division in Python?",
+          "options": ["/", "//", "%", "**"],
+          "answer": 1,
+          "explanation": "// performs floor division (integer division), which divides and rounds down to the nearest integer. / performs regular division."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the output of: print('Hello' + ' ' + 'World')?",
+          "options": ["HelloWorld", "Hello World", "Hello+World", "Error"],
+          "answer": 1,
+          "explanation": "The + operator concatenates strings in Python. 'Hello' + ' ' + 'World' joins them together as 'Hello World'."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the difference between a list and a tuple in Python.",
+          "answer": "Lists are mutable (can be changed after creation) using square brackets []. Tuples are immutable (cannot be changed) using parentheses (). Lists are slower but flexible, tuples are faster and used for fixed data."
+        },
+        {
+          "type": "theory",
+          "question": "What is Python's indentation rule and why is it important?",
+          "answer": "Python uses indentation (whitespace at the beginning of lines) to define code blocks instead of curly braces {}. Consistent indentation is mandatory — typically 4 spaces. Incorrect indentation causes IndentationError."
+        },
+        {
+          "type": "interview",
+          "question": "What are Python's key features that make it popular?",
+          "answer": "Python is popular because of: 1) Simple and readable syntax, 2) Dynamically typed, 3) Extensive standard library, 4) Cross-platform compatibility, 5) Support for multiple paradigms (OOP, functional), 6) Large community and ecosystem."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python program to check if a number is even or odd.",
+          "answer": "num = int(input('Enter a number: '))\nif num % 2 == 0:\n    print(f'{num} is Even')\nelse:\n    print(f'{num} is Odd')"
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python program to find the largest of three numbers.",
+          "answer": "a = int(input('Enter first number: '))\nb = int(input('Enter second number: '))\nc = int(input('Enter third number: '))\nlargest = max(a, b, c)\nprint(f'The largest number is: {largest}')"
+        },
+        {
+          "type": "mcq",
+          "question": "What is Python?",
+          "options": ["Programming Language", "Database", "Operating System", "Web Browser"],
+          "answer": 0,
+          "explanation": "Python is a high-level programming language used for web development, AI, automation, and more."
+        },
+        {
+          "type": "mcq",
+          "question": "Which symbol is used for comments in Python?",
+          "options": ["//", "#", "/*", "%"],
+          "answer": 1,
+          "explanation": "The # symbol is used for single-line comments in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to define a function in Python?",
+          "options": ["func", "define", "def", "function"],
+          "answer": 2,
+          "explanation": "The def keyword is used to create functions in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which data type is used to store text?",
+          "options": ["int", "float", "str", "bool"],
+          "answer": 2,
+          "explanation": "The str data type is used to store textual data in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which function is used to display output in Python?",
+          "options": ["echo()", "display()", "show()", "print()"],
+          "answer": 3,
+          "explanation": "The print() function is used to display output on the screen."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the correct file extension for Python files?",
+          "options": [".java", ".py", ".html", ".cpp"],
+          "answer": 1,
+          "explanation": "Python source files use the .py extension."
+        },
+        {
+          "type": "mcq",
+          "question": "Which operator is used for addition?",
+          "options": ["-", "*", "+", "/"],
+          "answer": 2,
+          "explanation": "The + operator is used to add values in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which data type stores True or False values?",
+          "options": ["bool", "str", "list", "tuple"],
+          "answer": 0,
+          "explanation": "Boolean data type stores either True or False."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used for conditional statements?",
+          "options": ["for", "if", "loop", "switch"],
+          "answer": 1,
+          "explanation": "The if keyword is used to execute conditional logic."
+        },
+        {
+          "type": "mcq",
+          "question": "Which loop is used to iterate over a sequence?",
+          "options": ["for", "switch", "case", "goto"],
+          "answer": 0,
+          "explanation": "The for loop is used to iterate through sequences like lists and strings."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to create a loop?",
+          "options": ["repeat", "loop", "for", "iterate"],
+          "answer": 2,
+          "explanation": "The for keyword creates loops in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the output type of input() function?",
+          "options": ["int", "float", "str", "bool"],
+          "answer": 2,
+          "explanation": "The input() function always returns user input as a string."
+        },
+        {
+          "type": "mcq",
+          "question": "Which collection type is mutable?",
+          "options": ["tuple", "string", "list", "int"],
+          "answer": 2,
+          "explanation": "Lists are mutable, meaning their elements can be changed."
+        },
+        {
+          "type": "mcq",
+          "question": "Which collection type is immutable?",
+          "options": ["list", "dictionary", "set", "tuple"],
+          "answer": 3,
+          "explanation": "Tuples are immutable and cannot be modified after creation."
+        },
+        {
+          "type": "mcq",
+          "question": "Which function is used to find the length of a list?",
+          "options": ["count()", "size()", "len()", "length()"],
+          "answer": 2,
+          "explanation": "The len() function returns the number of elements in a collection."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to import modules?",
+          "options": ["include", "import", "using", "require"],
+          "answer": 1,
+          "explanation": "The import keyword is used to include modules in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which operator is used for equality comparison?",
+          "options": ["=", "!=", "==", "==="],
+          "answer": 2,
+          "explanation": "The == operator checks whether two values are equal."
+        },
+        {
+          "type": "mcq",
+          "question": "Which data structure stores key-value pairs?",
+          "options": ["list", "tuple", "dictionary", "set"],
+          "answer": 2,
+          "explanation": "Dictionaries store data as key-value pairs."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to stop a loop?",
+          "options": ["exit", "break", "stop", "end"],
+          "answer": 1,
+          "explanation": "The break statement immediately exits a loop."
+        },
+        {
+          "type": "mcq",
+          "question": "Which function converts a string into an integer?",
+          "options": ["str()", "float()", "int()", "bool()"],
+          "answer": 2,
+          "explanation": "The int() function converts values into integers."
+        }
+      ]
+    },
+    {
+      "id": "python_intermediate",
+      "name": "Intermediate",
+      "level": 2,
+      "description": "Functions, loops, file handling, error handling, and modules",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What keyword is used to define a function in Python?",
+          "options": ["function", "func", "def", "define"],
+          "answer": 2,
+          "explanation": "The 'def' keyword is used to define a function in Python, followed by the function name and parentheses for parameters."
+        },
+        {
+          "type": "mcq",
+          "question": "What does the 'break' statement do in a loop?",
+          "options": ["Skips the current iteration", "Terminates the loop entirely", "Restarts the loop", "Pauses the loop"],
+          "answer": 1,
+          "explanation": "'break' immediately exits the loop. 'continue' skips the current iteration and moves to the next one."
+        },
+        {
+          "type": "mcq",
+          "question": "Which method is used to add an element at the end of a list?",
+          "options": ["add()", "insert()", "append()", "push()"],
+          "answer": 2,
+          "explanation": "append() adds a single element to the end of a list. insert() adds at a specific index. There is no push() or add() for lists."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the output of: len([1, [2, 3], 4])?",
+          "options": ["4", "3", "5", "Error"],
+          "answer": 1,
+          "explanation": "len() counts the top-level elements. The list has 3 elements: 1, [2,3] (nested list counts as one), and 4."
+        },
+        {
+          "type": "mcq",
+          "question": "What does the 'try-except' block do in Python?",
+          "options": ["Creates a loop", "Defines a function", "Handles exceptions/errors", "Imports a module"],
+          "answer": 2,
+          "explanation": "try-except is Python's error handling mechanism. Code that might cause an error goes in 'try', and error handling goes in 'except'."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the difference between *args and **kwargs in Python.",
+          "answer": "*args allows a function to accept any number of positional arguments as a tuple. **kwargs allows any number of keyword arguments as a dictionary. Example: def func(*args, **kwargs) can accept func(1, 2, name='Raj')."
+        },
+        {
+          "type": "interview",
+          "question": "What is the difference between deep copy and shallow copy?",
+          "answer": "Shallow copy creates a new object but references the same nested objects. Deep copy creates a completely independent copy of all nested objects. Use copy.copy() for shallow and copy.deepcopy() for deep copy."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python function to check if a string is a palindrome.",
+          "answer": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\nword = input('Enter a string: ')\nif is_palindrome(word):\n    print(f'{word} is a palindrome')\nelse:\n    print(f'{word} is not a palindrome')"
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python program to count the frequency of each character in a string.",
+          "answer": "text = input('Enter a string: ')\nfreq = {}\nfor char in text:\n    freq[char] = freq.get(char, 0) + 1\nfor char, count in freq.items():\n    print(f'{char}: {count}')"
+        },
+        {
+          "type": "theory",
+          "question": "What are list comprehensions and give an example?",
+          "answer": "List comprehensions provide a concise way to create lists. Syntax: [expression for item in iterable if condition]. Example: squares = [x**2 for x in range(10)] creates [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]."
+        },
+        {
+          "type": "mcq",
+          "question": "Which Python library is mainly used for data analysis?",
+          "options": ["NumPy", "Pandas", "Tkinter", "Flask"],
+          "answer": 1,
+          "explanation": "Pandas is widely used for data manipulation and analysis."
+        },
+        {
+          "type": "mcq",
+          "question": "What does OOP stand for?",
+          "options": ["Object Oriented Programming", "Only Object Programming", "Object Ordered Process", "Optional Object Programming"],
+          "answer": 0,
+          "explanation": "OOP is a programming paradigm based on objects and classes."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to create a class in Python?",
+          "options": ["define", "function", "class", "object"],
+          "answer": 2,
+          "explanation": "The class keyword is used to define a class in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which method is automatically called when an object is created?",
+          "options": ["start()", "create()", "__init__()", "__main__()"],
+          "answer": 2,
+          "explanation": "__init__() is the constructor method automatically executed during object creation."
+        },
+        {
+          "type": "mcq",
+          "question": "Which symbol is used to inherit a class?",
+          "options": [":", "()", "[]", "{}"],
+          "answer": 1,
+          "explanation": "Parent class names are passed inside parentheses during inheritance."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is used for numerical computing?",
+          "options": ["Pandas", "NumPy", "Matplotlib", "Requests"],
+          "answer": 1,
+          "explanation": "NumPy provides powerful numerical array operations."
+        },
+        {
+          "type": "mcq",
+          "question": "Which function is used to open a file in Python?",
+          "options": ["read()", "open()", "file()", "load()"],
+          "answer": 1,
+          "explanation": "The open() function is used for file handling operations."
+        },
+        {
+          "type": "mcq",
+          "question": "Which mode is used to append data to a file?",
+          "options": ["r", "w", "a", "x"],
+          "answer": 2,
+          "explanation": "Append mode (a) adds new content without deleting existing data."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used for exception handling?",
+          "options": ["catch", "try", "error", "check"],
+          "answer": 1,
+          "explanation": "The try block is used to handle exceptions in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which block executes if an exception occurs?",
+          "options": ["final", "except", "error", "catch"],
+          "answer": 1,
+          "explanation": "The except block handles errors generated in the try block."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a lambda function?",
+          "options": ["A named function", "An anonymous function", "A loop", "A module"],
+          "answer": 1,
+          "explanation": "Lambda functions are small anonymous functions created using the lambda keyword."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to create anonymous functions?",
+          "options": ["func", "lambda", "anonymous", "def"],
+          "answer": 1,
+          "explanation": "The lambda keyword creates anonymous functions."
+        },
+        {
+          "type": "mcq",
+          "question": "Which method adds an element to a list?",
+          "options": ["insert()", "append()", "add()", "push()"],
+          "answer": 1,
+          "explanation": "append() adds an element at the end of a list."
+        },
+        {
+          "type": "mcq",
+          "question": "Which method removes the last item from a list?",
+          "options": ["delete()", "remove()", "pop()", "clear()"],
+          "answer": 2,
+          "explanation": "pop() removes and returns the last element from a list."
+        },
+        {
+          "type": "mcq",
+          "question": "Which module is used for regular expressions?",
+          "options": ["regex", "re", "pyregex", "pattern"],
+          "answer": 1,
+          "explanation": "The re module provides regular expression support in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the output of type([1,2,3])?",
+          "options": ["<class 'tuple'>", "<class 'list'>", "<class 'set'>", "<class 'dict'>"],
+          "answer": 1,
+          "explanation": "Square brackets create a list object in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "Which statement is used to skip the current loop iteration?",
+          "options": ["stop", "continue", "break", "pass"],
+          "answer": 1,
+          "explanation": "continue skips the current iteration and moves to the next loop cycle."
+        },
+        {
+          "type": "mcq",
+          "question": "Which statement does nothing in Python?",
+          "options": ["skip", "empty", "pass", "null"],
+          "answer": 2,
+          "explanation": "pass is a placeholder statement that performs no action."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is used for plotting graphs?",
+          "options": ["NumPy", "Pandas", "Matplotlib", "TensorFlow"],
+          "answer": 2,
+          "explanation": "Matplotlib is commonly used for data visualization and graph plotting."
+        },
+        {
+          "type": "mcq",
+          "question": "Which framework is used for backend web development in Python?",
+          "options": ["React", "Angular", "Django", "Bootstrap"],
+          "answer": 2,
+          "explanation": "Django is a popular Python framework for backend web development."
+        }
+      ]
+    },
+    {
+      "id": "python_advanced",
+      "name": "Advanced",
+      "level": 3,
+      "description": "OOP, decorators, generators, multithreading, and design patterns",
+      "unlock_score": 60,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is a decorator in Python?",
+          "options": ["A comment style", "A function that modifies another function", "A type of loop", "A class attribute"],
+          "answer": 1,
+          "explanation": "A decorator is a function that takes another function as an argument, adds functionality, and returns a modified function. Used with @decorator_name syntax."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of the __init__ method in a Python class?",
+          "options": ["To delete an object", "To initialize object attributes", "To create a static method", "To import modules"],
+          "answer": 1,
+          "explanation": "__init__ is the constructor method called automatically when a new object is created. It initializes the object's attributes."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a generator in Python?",
+          "options": ["A function that returns a list", "A function that uses yield to produce values lazily", "A type of class", "A built-in module"],
+          "answer": 1,
+          "explanation": "Generators use 'yield' instead of 'return' to produce values one at a time, making them memory-efficient for large datasets."
+        },
+        {
+          "type": "mcq",
+          "question": "What does the GIL (Global Interpreter Lock) do in Python?",
+          "options": ["Allows true parallel threading", "Prevents multiple threads from executing Python code simultaneously", "Manages memory allocation", "Handles file I/O"],
+          "answer": 1,
+          "explanation": "The GIL ensures only one thread executes Python bytecode at a time, which limits true parallelism in CPU-bound multi-threaded programs."
+        },
+        {
+          "type": "mcq",
+          "question": "Which design pattern does Python's 'with' statement implement?",
+          "options": ["Observer", "Factory", "Context Manager", "Singleton"],
+          "answer": 2,
+          "explanation": "The 'with' statement implements the Context Manager pattern using __enter__ and __exit__ methods for proper resource management."
+        },
+        {
+          "type": "theory",
+          "question": "Explain the concept of metaclasses in Python.",
+          "answer": "Metaclasses are 'classes of classes' that define how classes behave. type is the default metaclass. You can create custom metaclasses by inheriting from type and overriding __new__ or __init__ to control class creation, attribute validation, or automatic method generation."
+        },
+        {
+          "type": "interview",
+          "question": "Explain the difference between multithreading and multiprocessing in Python.",
+          "answer": "Multithreading runs multiple threads in one process but is limited by GIL for CPU tasks — best for I/O-bound work. Multiprocessing runs separate processes with their own memory space, bypassing GIL — ideal for CPU-bound tasks. Use threading module for I/O, multiprocessing module for CPU."
+        },
+        {
+          "type": "coding",
+          "question": "Write a Python decorator that measures execution time of a function.",
+          "answer": "import time\n\ndef timer_decorator(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end-start:.4f} seconds')\n        return result\n    return wrapper\n\n@timer_decorator\ndef slow_function():\n    time.sleep(1)\n    print('Done!')\n\nslow_function()"
+        },
+        {
+          "type": "coding",
+          "question": "Implement a simple iterator class for Fibonacci numbers.",
+          "answer": "class Fibonacci:\n    def __init__(self, limit):\n        self.limit = limit\n        self.a, self.b = 0, 1\n        self.count = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.count >= self.limit:\n            raise StopIteration\n        value = self.a\n        self.a, self.b = self.b, self.a + self.b\n        self.count += 1\n        return value\n\nfor num in Fibonacci(10):\n    print(num)"
+        },
+        {
+          "type": "theory",
+          "question": "What are abstract base classes (ABC) and when should you use them?",
+          "answer": "ABCs (from abc module) define interfaces that subclasses must implement. Use @abstractmethod to declare methods that must be overridden. Use ABCs when you want to enforce a contract — ensuring all subclasses implement specific methods without allowing direct instantiation of the base class."
+        },
+        {
+          "type": "mcq",
+          "question": "What is a decorator in Python?",
+          "options": ["A loop", "A function that modifies another function", "A database", "A variable"],
+          "answer": 1,
+          "explanation": "Decorators are used to extend or modify the behavior of functions without changing their actual code."
+        },
+        {
+          "type": "mcq",
+          "question": "Which symbol is commonly used for decorators?",
+          "options": ["#", "@", "$", "&"],
+          "answer": 1,
+          "explanation": "The @ symbol is used before a function name to apply a decorator."
+        },
+        {
+          "type": "mcq",
+          "question": "What is multithreading used for?",
+          "options": ["Creating databases", "Running multiple tasks simultaneously", "Making UI designs", "Creating variables"],
+          "answer": 1,
+          "explanation": "Multithreading allows concurrent execution of multiple threads in a program."
+        },
+        {
+          "type": "mcq",
+          "question": "Which module is used for multithreading in Python?",
+          "options": ["thread", "threading", "threads", "multi"],
+          "answer": 1,
+          "explanation": "The threading module provides support for multithreading in Python."
+        },
+        {
+          "type": "mcq",
+          "question": "What does API stand for?",
+          "options": ["Application Programming Interface", "Advanced Program Internet", "Application Process Integration", "Automated Programming Interface"],
+          "answer": 0,
+          "explanation": "API allows communication between different software applications."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is commonly used for API requests in Python?",
+          "options": ["numpy", "requests", "tkinter", "pygame"],
+          "answer": 1,
+          "explanation": "The requests library is widely used to send HTTP requests."
+        },
+        {
+          "type": "mcq",
+          "question": "Which framework is commonly used for building REST APIs?",
+          "options": ["Flask", "NumPy", "Pandas", "Matplotlib"],
+          "answer": 0,
+          "explanation": "Flask is a lightweight framework commonly used to create REST APIs."
+        },
+        {
+          "type": "mcq",
+          "question": "What is serialization in Python?",
+          "options": ["Converting objects into a storable format", "Creating loops", "Deleting files", "Running threads"],
+          "answer": 0,
+          "explanation": "Serialization converts Python objects into formats like JSON for storage or transfer."
+        },
+        {
+          "type": "mcq",
+          "question": "Which module is commonly used for JSON handling?",
+          "options": ["json", "pickle", "data", "store"],
+          "answer": 0,
+          "explanation": "The json module is used to parse and generate JSON data."
+        },
+        {
+          "type": "mcq",
+          "question": "What is recursion?",
+          "options": ["A loop", "A function calling itself", "A database query", "An API request"],
+          "answer": 1,
+          "explanation": "Recursion occurs when a function directly or indirectly calls itself."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used to handle exceptions finally?",
+          "options": ["end", "close", "finally", "finish"],
+          "answer": 2,
+          "explanation": "The finally block always executes whether an exception occurs or not."
+        },
+        {
+          "type": "mcq",
+          "question": "What is the purpose of generators in Python?",
+          "options": ["To generate websites", "To return values one at a time", "To create APIs", "To handle databases"],
+          "answer": 1,
+          "explanation": "Generators produce values lazily using the yield keyword."
+        },
+        {
+          "type": "mcq",
+          "question": "Which keyword is used in generators?",
+          "options": ["yield", "return", "generate", "send"],
+          "answer": 0,
+          "explanation": "yield pauses the function and returns values one at a time."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is mainly used for deep learning?",
+          "options": ["TensorFlow", "Tkinter", "Requests", "BeautifulSoup"],
+          "answer": 0,
+          "explanation": "TensorFlow is a popular deep learning and machine learning framework."
+        },
+        {
+          "type": "mcq",
+          "question": "What is web scraping?",
+          "options": ["Creating websites", "Extracting data from websites", "Designing APIs", "Deleting web pages"],
+          "answer": 1,
+          "explanation": "Web scraping is used to collect data from websites automatically."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is commonly used for web scraping?",
+          "options": ["BeautifulSoup", "TensorFlow", "Pandas", "NumPy"],
+          "answer": 0,
+          "explanation": "BeautifulSoup helps parse HTML and extract website data."
+        },
+        {
+          "type": "mcq",
+          "question": "What is virtual environment in Python?",
+          "options": ["A cloud server", "An isolated Python environment", "A database", "A framework"],
+          "answer": 1,
+          "explanation": "Virtual environments allow separate package installations for projects."
+        },
+        {
+          "type": "mcq",
+          "question": "Which command creates a virtual environment?",
+          "options": ["python create venv", "python -m venv env", "python env create", "make venv"],
+          "answer": 1,
+          "explanation": "This command creates a new isolated virtual environment."
+        },
+        {
+          "type": "mcq",
+          "question": "Which library is used for asynchronous programming?",
+          "options": ["asyncio", "threading", "numpy", "tkinter"],
+          "answer": 0,
+          "explanation": "asyncio supports asynchronous programming using async and await."
+        },
+        {
+          "type": "mcq",
+          "question": "What does ORM stand for?",
+          "options": ["Object Relational Mapping", "Object Runtime Method", "Operational Relation Manager", "Online Resource Mapping"],
+          "answer": 0,
+          "explanation": "ORM allows interaction with databases using Python objects instead of SQL queries directly."
+        }
+      ]
+    }
+  ]
+}
